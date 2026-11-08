@@ -1,0 +1,192 @@
+# Configurazione del motore del Debrief chirurgico.
+# Ogni regola qui viene dal prompt dello scheduled task (versione del 25/10/2026).
+# Cambiare un peso = cambiare una riga di questo file (e far girare i test).
+
+formula:
+  w_rivista: 0.35
+  w_keyword: 0.45
+  w_recency: 0.20
+  keyword_cap: 5.0
+  peso_linee_guida: 1.2
+  recency_data_mancante: 0.3
+  penalita_abstract_breve: 0.70
+  abstract_breve_caratteri: 40
+  top_n: 7
+  candidati_extra: 5        # oltre la top-7, per permettere riordino editoriale
+  minimo_area: 3
+  boundary_max_len: 6       # termini <= 6 caratteri solo con confine di parola
+
+# Emivita (ore) per scalino di finestra (giorni)
+emivita_ore:
+  3: 36
+  7: 72
+  10: 96
+  14: 120
+  21: 168
+  28: 192
+
+tier_peso: {1: 1.0, 2: 0.7, 3: 0.4}
+
+riviste:
+  # sigla MEDLINE: tier
+  "Ann Surg": 1
+  "JAMA Surg": 1
+  "Br J Surg": 1
+  "Ann Surg Oncol": 1
+  "Surgery": 1
+  "N Engl J Med": 1
+  "Lancet": 1
+  "Lancet Oncol": 1
+  "Lancet Gastroenterol Hepatol": 1
+  "J Hepatol": 1
+  "Gastroenterology": 1
+  "Gut": 1
+  "HPB (Oxford)": 1
+  "Hernia": 1
+  "Ann Surg Treat Res": 1
+  "Dis Colon Rectum": 1
+  "Gastric Cancer": 1
+  "Surg Endosc": 2
+  "World J Surg": 2
+  "J Gastrointest Surg": 2
+  "Int J Surg": 2
+  "Am J Surg": 2
+  "Eur J Surg Oncol": 2
+  "Pancreatology": 2
+  "Liver Int": 2
+  "Surg Oncol": 2
+  "J Am Coll Surg": 2
+  "Colorectal Dis": 2
+  "Dis Esophagus": 2
+  "Obes Surg": 2
+  "Tech Coloproctol": 2
+  "J Surg Oncol": 2
+  "Updates Surg": 3
+  "Langenbecks Arch Surg": 3
+  "BJS Open": 3
+  "Int J Colorectal Dis": 3
+  "Surg Innov": 3
+
+# Query di recupero (identiche al prompt, per confrontabilità col connettore)
+query:
+  A: ["Ann Surg", "JAMA Surg", "Br J Surg", "Ann Surg Oncol", "Surgery", "Surg Endosc",
+      "HPB (Oxford)", "J Gastrointest Surg", "World J Surg", "Updates Surg",
+      "Langenbecks Arch Surg", "BJS Open", "Int J Surg", "Eur J Surg Oncol", "Am J Surg",
+      "J Am Coll Surg", "Hernia", "Ann Surg Treat Res"]
+  B: ["N Engl J Med", "Lancet", "Lancet Oncol", "Lancet Gastroenterol Hepatol", "J Hepatol",
+      "Gastroenterology", "Gut", "Pancreatology", "Dis Colon Rectum", "Colorectal Dis",
+      "Int J Colorectal Dis", "Tech Coloproctol", "Gastric Cancer", "Dis Esophagus",
+      "Obes Surg", "Surg Oncol", "J Surg Oncol"]
+  supplementare:
+    parete: ["Hernia", "Surg Endosc", "BJS Open", "Ann Surg", "Br J Surg", "JAMA Surg",
+             "Am J Surg", "J Am Coll Surg", "World J Surg", "Langenbecks Arch Surg",
+             "Updates Surg", "Int J Surg", "Surgery"]
+    proctologia: ["Tech Coloproctol", "Int J Colorectal Dis", "Colorectal Dis", "Dis Colon Rectum",
+                  "Ann Surg", "Br J Surg", "Surg Endosc", "BJS Open", "Updates Surg",
+                  "Langenbecks Arch Surg", "Am J Surg", "Surgery"]
+
+aree:
+  hpb:
+    label: "HPB"
+    scalini: [3, 7, 10, 14]
+    termini:
+      1.0: [pancreaticoduodenectomy, pancreatectomy, hepatectomy, liver resection, hepatobiliary,
+            pancreatic cancer, hepatocellular carcinoma, cholangiocarcinoma,
+            IPMN, intraductal papillary mucinous, pancreatoduodenectomy]
+      0.9: [biliary tract, portal vein, pancreatic fistula, whipple,
+            robotic cholecystectomy, laparoscopic cholecystectomy, critical view of safety,
+            subtotal cholecystectomy, pancreatic neuroendocrine, chronic pancreatitis,
+            pancreatic head, pancreatic cyst]
+      0.8: [bile leak, choledocholithiasis, common bile duct, colorectal liver metastases,
+            pancreatic tail, pancreatic duct]
+      0.7: [cholelithiasis, gallstone, cholecystectomy, cholecystitis, cholangitis, Mirizzi,
+            bile duct injury, liver transplantation]
+      0.5: [ERCP, gallbladder]
+    ancore: [liver, hepat, pancrea, biliary, bile duct, cholangi, gallbladder, gallstone,
+             choledoch, whipple, portal vein, Klatskin, ampullary, cholecyst, Mirizzi, ERCP]
+  parete:
+    label: "Parete addominale"
+    scalini: [7, 10, 14, 21, 28]
+    termini:
+      1.0: [inguinal hernia, femoral hernia, groin hernia, ventral hernia, incisional hernia,
+            abdominal wall reconstruction, hernia repair]
+      0.9: [umbilical hernia, component separation, transversus abdominis release, Rives-Stoppa,
+            mesh repair]
+      0.8: [mesh infection, parastomal hernia, hernioplasty]
+      0.7: [diastasis recti, TEP, TAPP, eTEP, Lichtenstein, chronic groin pain, biologic mesh]
+  colon-retto:
+    label: "Colon-retto"
+    scalini: [3, 7, 10, 14]
+    termini:
+      1.0: [colorectal cancer, rectal cancer, colon cancer, total mesorectal excision,
+            complete mesocolic excision, diverticulitis]
+      0.9: [colectomy, hemicolectomy, proctectomy, anterior resection, sigmoidectomy, ileal pouch,
+            anastomotic leak, ulcerative colitis, watch and wait, total neoadjuvant therapy,
+            ileorectal anastomosis]
+      0.8: [Crohn, ileostomy, colostomy, appendiceal, appendix cancer, peritoneal metastases,
+            HIPEC, cytoreductive, peritonectomy]
+      0.7: [stoma, colonoscopy, adenoma detection]
+    esclusioni_pertinenza: [ovarian cancer, ovarian carcinoma]
+  eso-gastrico:
+    label: "Esofago-gastrico"
+    scalini: [3, 7, 10, 14]
+    termini:
+      1.0: [esophagectomy, gastrectomy, gastric cancer, esophageal cancer,
+            gastroesophageal junction, bariatric, sleeve gastrectomy, gastric bypass,
+            fundoplication, achalasia]
+      0.9: [D2 lymphadenectomy, hiatal hernia, gastroesophageal reflux, esophagogastric]
+      0.8: [Roux-en-Y, Barrett, GIST, POEM, obesity surgery, metabolic surgery, variceal]
+      0.7: [tracheoesophageal, duodenal, LECS]
+  proctologia:
+    label: "Proctologia"
+    scalini: [7, 10, 14, 21, 28]
+    soglia_prevalenza: 1.8
+    termini:
+      1.0: [hemorrhoid, anal fistula, fistula-in-ano, anal fissure, pilonidal, rectal prolapse,
+            fecal incontinence, anal cancer, perianal fistula, rectovaginal fistula, anal abscess]
+      0.9: [anal canal, perianal, anorectal, seton, LIFT procedure, anal sphincter, rectocele,
+            obstructed defecation, pruritus ani]
+
+scarti:
+  tipi_pubblicazione:   # PublicationType che portano allo scarto obbligatorio
+    - Published Erratum
+    - Retraction of Publication
+    - Retracted Publication
+    - Expression of Concern
+    - Comment
+    - Letter
+    - Biography
+    - Obituary
+    - News
+    - Portrait
+  editoriale: Editorial   # scartato salvo abstract strutturato lungo
+  editoriale_abstract_min: 400
+  titolo:               # pattern (case-insensitive) nel titolo
+    - "asovisual abstract"
+    - "aso visual abstract"
+    - "aso author reflections"
+    - "visual abstract"
+    - "invited commentary"
+    - "editorial comment"
+    - "^comment on"
+    - "^reply"
+    - "authors'? reply"
+    - "^response to"
+    - "letter to the editor"
+    - "^erratum"
+    - "^correction"
+    - "^corrigendum"
+    - "^retraction"
+    - "expression of concern"
+    - "reviewers"
+    - "in memoriam"
+    - "obituary"
+  segnali_editoriali:    # non scartano: marcano per il riordino del modello
+    "Case Reports": case_report
+    "Video-Audio Media": video
+    "Practice Guideline": linea_guida
+    "Guideline": linea_guida
+    "Consensus Development Conference": linea_guida
+    "Randomized Controlled Trial": rct
+    "Meta-Analysis": metanalisi
+    "Systematic Review": revisione_sistematica

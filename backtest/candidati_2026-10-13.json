@@ -1,0 +1,1349 @@
+{
+ "data_edizione": "2026-10-13",
+ "generato": "2026-10-13T11:39:00+02:00",
+ "recupero": {
+  "base": [
+   398,
+   234
+  ],
+  "base_unione": 632,
+  "base_metadati": 632,
+  "supplementare_proctologia": [
+   208
+  ],
+  "supplementare_proctologia_unione": 208,
+  "supplementare_proctologia_metadati": 208
+ },
+ "record_totali": 795,
+ "scarti_obbligatori": 311,
+ "scartati_deduplica": 32,
+ "pmid_gia_usciti_in_input": 49,
+ "aree": {
+  "hpb": {
+   "area": "hpb",
+   "areaLabel": "HPB",
+   "scalino_giorni": 3,
+   "scalino_iniziale": 3,
+   "finestra": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+   "espressione_sintesi": "nelle ultime 72 ore",
+   "tetto_raggiunto": false,
+   "valutati": 14,
+   "selezionati": 7,
+   "tentativi_scalini": [
+    {
+     "scalino": 3,
+     "in_finestra": 20,
+     "scarti_obbligatori": 6,
+     "gia_usciti": 0,
+     "selezionabili": 14
+    }
+   ],
+   "pmid_oltre_14_giorni": [],
+   "articoli": [
+    {
+     "pmid": "42864461",
+     "doi": "10.1007/s00464-026-13421-0",
+     "titolo_en": "Preoperative prediction model for critical view of safety achievement in laparoscopic cholecystectomy: a retrospective cohort study.",
+     "abstract": "BACKGROUND: We developed and validated a preoperative model to predict the difficulty in achieving the critical view of safety (CVS) during laparoscopic cholecystectomy (LC).\nMETHODS: Patients who underwent LC with preoperative computed tomography (CT) and magnetic resonance cholangiopancreatography between January 2015 and December 2023 were retrospectively analyzed and randomly assigned to derivation and validation cohorts (8:2). Surgical difficulty was defined as failure to achieve CVS. Logistic regression analysis was used to identify independent predictors. Model performance was evaluated using the area under the receiver operating characteristic curve and Brier score.\nRESULTS: Independent preoperative risk factors included age ≥ 65 years, American Society of Anesthesiologists physical status ≥ 3, preoperative endoscopic gallbladder drainage or stenting, CT attenuation of the CVS window ≥ - 26 HU, and common bile duct disruption on magnetic resonance cholangiopancreatography (all p < 0.05). The prediction score (0-13) demonstrated an area under the receiver operating characteristic curve of 0.732 (95% confidence interval 0.528-0.936) in the validation cohort. Risk stratification identified low-, moderate-, and high-risk groups with increasing rates of failure to achieve CVS.\nCONCLUSIONS: This preoperative imaging-based scoring system may help predict CVS failure in LC and guide surgical decision-making.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Gunji",
+      "Chiba",
+      "Kojima"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "laparoscopic cholecystectomy",
+      "critical view of safety",
+      "common bile duct",
+      "cholecystectomy",
+      "gallbladder"
+     ],
+     "keyword": 3.8,
+     "score": 70.5,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.76,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 1
+    },
+    {
+     "pmid": "42864158",
+     "doi": "10.1016/j.surg.2026.110568",
+     "titolo_en": "Adoption and outcomes of robotic pancreatectomy in the United States: An instrumental variable analysis.",
+     "abstract": "BACKGROUND: The use of minimally invasive surgery approaches has lagged in pancreatic surgery. Single-center studies support using robotic approaches for pancreatectomy, but as pancreatectomy expands outside specialty centers, current data may not reflect all practice settings.\nMETHODS: We queried Medicare claims for fee-for-service beneficiaries undergoing distal pancreatectomy or pancreaticoduodenectomy from 2011 to 2023, capturing a varied population across practice settings. We used instrumental variable analysis to compare risk-adjusted 90-day postoperative outcomes between open, laparoscopic, and robotic approaches. The instrumental variable used was hospital referral region-level prior year pancreatectomy robotic use. Hospitals were volume stratified based on the Leapfrog Group's cutoff of 20 operations annually.\nRESULTS: We identified 55,514 beneficiaries: 43,230 pancreaticoduodenectomy (756 robotic, 753 laparoscopic, and 41,721 open) and 12,284 distal pancreatectomy (1,131 robotic, 981 laparoscopic, and 10,172 open). Laparoscopic pancreatectomy increased after initial adoption between 2014 and 2016 before plateauing. Robotic-assisted pancreaticoduodenectomy and distal pancreatectomy increased 12-fold and 3.6-fold over the study period, respectively, resulting in a 10-percentage point increase in minimally invasive surgery pancreatectomies. Robotic-assisted pancreatectomy was associated with significantly lower rates of serious complications (10.4% vs 16.8%), reoperation (5.7% vs 7.8%), and 90-day mortality (5.2% vs 7.7%) compared with open procedures. Outcomes were similar between robotic and laparoscopic procedures. While outcomes were overall better at high-volume centers, outcomes did not vary by approach within low-volume hospitals. Ninety-day total episode spending was lower for robotic as compared with open operations.\nCONCLUSION: There has been rapid growth in robotic-assisted pancreatectomy over the past 2 decades, resulting in improved penetration of minimally invasive surgery approaches. The use of robotic-assisted pancreatectomy is not associated with worse outcomes compared with open and laparoscopic procedures, including at low-volume institutions. These findings support the use of the robotic approach for this complex operation.",
+     "rivista": "Surgery",
+     "rivista_sigla": "Surgery",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T21:57:00",
+     "autori": [
+      "Savitch",
+      "Fleischer",
+      "Mullens"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "pancreaticoduodenectomy",
+      "pancreatectomy"
+     ],
+     "keyword": 2.0,
+     "score": 62.5,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.4,
+     "c_recency": 0.768,
+     "ore_eta": 13.7,
+     "penalita_abstract": false,
+     "rank": 2
+    },
+    {
+     "pmid": "42864470",
+     "doi": "10.1007/s00464-026-13348-6",
+     "titolo_en": "Impact of puncture site location in percutaneous transhepatic gallbladder drainage on outcomes of subsequent laparoscopic cholecystectomy: a multicenter retrospective clinical study.",
+     "abstract": "BACKGROUND: Percutaneous transhepatic gallbladder drainage (PTGD) followed by laparoscopic cholecystectomy (LC) is an effective treatment strategy for acute cholecystitis (AC). However, the impact of the PTGD puncture site on subsequent LC outcomes has not been systematically investigated.\nMETHODS: This retrospective study included patients diagnosed with AC who underwent PTGD followed by LC at the First Affiliated Hospital of Dalian Medical University (January 2018-May 2025) and Yingkou Central Hospital (January 2020-May 2025). PTGD was performed according to the Tokyo Guidelines 2018 (TG18) and individualized clinical judgment. Based on CT imaging, patients were categorized into two groups according to the PTGD puncture site: the fundus group (n = 208), where the puncture was adjacent to the gallbladder fundus, and the neck group (n = 47), where the puncture was adjacent to the gallbladder neck. Clinical parameters compared included baseline characteristics, gallbladder neck stone impaction, post-PTGD hospital stay, LC operative time, difficult gallbladder, intraoperative injuries and hemorrhage, post-LC complications, drainage placement and duration after LC, total hospital stay for LC, post-LC hospital stay, and hospitalization expenses. Multivariable logistic and linear regression analyses were performed to evaluate the independent association between puncture site and perioperative outcomes.\nRESULTS: In univariate analyses, no significant differences were observed between the fundus and neck groups regarding intraoperative injuries or major postoperative complications. Compared with the neck group, the fundus group demonstrated significantly shorter LC operative time, a lower incidence of difficult gallbladder, fewer drainage placements and shorter drainage duration after LC, reduced post-LC hospital stay, and lower hospitalization expenses (P < 0.05). In multivariable logistic and linear regression analyses, after adjusting for sex, age, body mass index (BMI), gallbladder neck stone impaction, interval between PTGD and LC, and TG18 severity grade, fundus-adjacent puncture remained independently associated with a lower risk of difficult gallbladder, reduced drainage placements and shorter drainage duration after LC, shorter post-LC and total hospital stays, and lower hospitalization expenses. In addition, fundus-adjacent puncture was associated with a 11.93 min reduction in LC operative time, although the association did not reach statistical significance (95%CI - 24.40 to 0.54; P = 0.061).\nCONCLUSIONS: PTGD with puncture site adjacent to the gallbladder fundus is associated with improved surgical efficiency and reduced postoperative burden during subsequent LC. These findings suggest that fundus-adjacent puncture may be a favorable approach in clinical practice for optimizing patient outcomes following PTGD when technically feasible and clinically appropriate.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Wang",
+      "Zhang",
+      "Tong"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "laparoscopic cholecystectomy",
+      "cholecystectomy",
+      "cholecystitis",
+      "gallbladder"
+     ],
+     "keyword": 2.8,
+     "score": 61.5,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.56,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 3
+    },
+    {
+     "pmid": "42864456",
+     "doi": "10.1007/s00464-026-13497-8",
+     "titolo_en": "Comparison of endoscopic and radiologic drainage for symptomatic postoperative pancreatic fistula-associated collections after distal pancreatectomy.",
+     "abstract": "BACKGROUND: After distal pancreatectomy (DP), symptomatic postoperative pancreatic fistula (POPF)-associated collections are common and lead to readmissions. The choice of drainage modality remains debated. This study compared endoscopic and radiologic drainage as first-line treatment.\nMETHODS: This retrospective, single-center study included patients undergoing DP with or without splenectomy from 2012 to 2024. Patients who underwent DP with a concomitant digestive or vascular procedure or pancreatic anastomosis were excluded. The primary outcome was total hospital stay, defined as the sum of the index hospitalization and readmissions.\nRESULTS: Among 607 patients, 124 (20.4%) had POPF, including 94 (15.5%) with a symptomatic collection. Of these, 25 underwent endoscopic drainage (lumen-apposing metal stent, n = 19; double-pigtail stent, n = 6), 12 underwent radiologic drainage, and 57 received another treatment (medical treatment alone, n = 35; drain tract recanalization, n = 15; surgical reoperation, n = 4; endoscopic sphincterotomy, n = 3). The endoscopic and radiologic drainage groups were comparable, except for collection location adjacent to the pancreatic transection margin (endoscopic: 92% vs radiologic: 50%; p = 0.008). Total hospital stay within 90 days was shorter after endoscopic drainage (19 vs 31 days; p = 0.023), with no deaths within 90 days. The clinical success rate was higher after endoscopic drainage (76% vs 50%; p = 0.15), whereas drainage dysfunction was more frequent after radiologic drainage (17% vs 4%; p = 0.2). Four severe complications occurred: three after endoscopic drainage using a LAMS, including two hemorrhagic complications, and one after radiologic drainage. In univariable analysis, collection location adjacent to the pancreatic transection margin and endoscopic drainage were associated with shorter total hospital stay within 90 days (β = - 17 days; 95% CI - 29 to - 4.2; p = 0.010 and β = - 13 days; 95% CI - 24 to - 1.6; p = 0.026, respectively).\nCONCLUSIONS: After DP, first-line endoscopic drainage of symptomatic POPF-associated collections was associated with a shorter total hospital stay and a trend toward a higher clinical success rate but may carry a risk of bleeding.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Rondé-Roupie",
+      "Dokmak",
+      "Romengas"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "pancreatectomy",
+      "pancreatic fistula"
+     ],
+     "keyword": 1.9,
+     "score": 53.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.38,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 4
+    },
+    {
+     "pmid": "42864458",
+     "doi": "10.1007/s00464-026-13509-7",
+     "titolo_en": "Feasibility and clinical outcomes of omental buttress-and-wrapping to reduce postoperative complications following minimally invasive spleen-preserving distal pancreatectomy: a retrospective cohort study.",
+     "abstract": "BACKGROUND: Minimally invasive spleen-preserving distal pancreatectomy (MISPDP) is widely performed for benign and low-grade malignant lesions of the pancreatic body and tail while preserving splenic function. Although the Kimura technique maintains splenic perfusion by preserving splenic vessels, it requires meticulous dissection and management of the splenic vasculature and its branches. Clinically relevant postoperative pancreatic fistula (CR-POPF) and associated complications remain major determinants of postoperative recovery. This study evaluated the feasibility of the omental buttress-and-wrapping (OBW) technique during Kimura-MISPDP and assessed its impact on CR-POPF and short-term perioperative outcomes.\nMETHODS: We retrospectively reviewed patients who had undergone splenic vessel-preserving MISPDP at our institution between 2020 and 2025. Patients were classified into the OBW-Kimura group or the conventional Kimura group according to OBW use. Stabilized weighting (SW) was applied to mitigate potential selection bias by balancing measured covariates. Intraoperative and postoperative outcomes were compared using weighted analyses, and Firth penalized logistic regression was conducted to identify factors associated with CR-POPF.\nRESULTS: In total, 189 patients were enrolled, with 85 in the OBW-Kimura group and 104 in the conventional Kimura group. After SW adjustment, a significantly lower incidence of CR-POPF was observed in the OBW-Kimura group than in the conventional Kimura group (4.77% [95% CI 1.64-13.11%] vs 19.87% [95% CI 13.22-28.76%], P = 0.005). Patients treated with the OBW technique also had shorter postoperative drainage duration (8.00 [7.00, 11.00] vs. 11.00 [8.00, 14.00] days, P < 0.001) and shorter hospital stay (10.00 [8.00, 11.00] vs. 12.00 [9.00, 15.00] days, P < 0.001).\nCONCLUSION: Incorporating the OBW technique into Kimura-MISPDP was associated with a lower incidence of CR-POPF and shorter postoperative drainage duration and hospital stay. This approach may represent a promising adjunctive technique for decreasing pancreatic fistula and related postoperative complications following Kimura-MISPDP.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Pan",
+      "Huang",
+      "Wu"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "pancreatectomy",
+      "pancreatic fistula"
+     ],
+     "keyword": 1.9,
+     "score": 53.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.38,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 5
+    },
+    {
+     "pmid": "42864459",
+     "doi": "10.1007/s00464-026-13492-z",
+     "titolo_en": "Optimizing drain management following distal pancreatectomy: fewer drains and earlier removal guided by drain fluid amylase and C-reactive protein levels.",
+     "abstract": "BACKGROUND: Appropriate postoperative drain management, including early drain removal, is crucial following distal pancreatectomy (DP). This study aimed to investigate reliable criteria for early drain removal and the optimal drain placement site.\nMETHODS: We retrospectively analyzed patients undergoing DP from 2014 to 2024, with drains placed at the pancreatic stump and/or the left subphrenic space. Short-term outcomes were compared according to clinically relevant postoperative pancreatic fistula (CR-POPF) occurrence, and the risk factors were identified.\nRESULTS: Among 258 patients who underwent DP, 85.7% (n = 221) used two drains. CR-POPF developed in 28.3% (n = 73). The CR-POPF group demonstrated higher body mass index, less frequent minimally invasive surgery, greater blood loss, and more transfusions than the no CR-POPF group. The CR-POPF group exhibited significantly higher drain fluid amylase and C-reactive protein levels on postoperative days (POD) 1 and 3 (DFA1/3 and CRP1/3). Multivariable analysis identified DFA3 ≥ 1,000 U/L (odds ratio [OR] 8.21; P < 0.001), CRP3 ≥ 12 mg/dL (OR 3.37; P = 0.004), laparotomy (OR 3.26; P = 0.007), age (OR 1.04; P = 0.049), and operative time (OR 1.01; P = 0.006) as independent predictors for CR-POPF. The left subphrenic drain showed lower DFA1/3 values and a lesser association with CR-POPF than the pancreatic stump drain.\nCONCLUSION: DFA3 and CRP3 may function as practical indicators for early drain removal. Left subphrenic drain may be considered for omission when an effective drain is placed at the pancreatic stump.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Watanabe",
+      "Kimura",
+      "Kurihara"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "pancreatectomy",
+      "pancreatic fistula"
+     ],
+     "keyword": 1.9,
+     "score": 53.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.38,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 6
+    },
+    {
+     "pmid": "42861728",
+     "doi": "10.1097/XCS.0000000000002249",
+     "titolo_en": "Robotic Care Outcomes Project (ROBOCOP): Emergency Cholecystectomy and Bile Duct Injury.",
+     "abstract": "BACKGROUND: Comparative bile duct injury (BDI) risk between robotic and laparoscopic cholecystectomy remains uncertain in contemporary emergency practice. We compared BDI and perioperative outcomes after robotic (RCHOLE) versus laparoscopic cholecystectomy (LCHOLE).\nSTUDY DESIGN: We conducted a retrospective cohort study of adults undergoing emergency or urgent cholecystectomy from 2019-2024 within the Premier Healthcare Database. Propensity scores incorporating patient, admission, surgeon, and hospital characteristics were used for 1:1 nearest-neighbor matching. Outcomes included index and 30-day BDI, conversion, perioperative complications, reoperation, and readmission. Conditional logistic regression evaluated BDI in matched pairs.\nRESULTS: Among 522,629 patients, 449,312 underwent LCHOLE and 73,317 RCHOLE; RCHOLE use increased from 4.2% in 2019 to 29.7% in 2024. Propensity score matching (PSM) yielded 73,316 patients per group with standardized mean differences <0.1. RCHOLE was associated with lower BDI during the index hospitalization (0.03% vs 0.05%; OR, 0.55; 95% CI, 0.32-0.94) and through 30 days (0.06% vs 0.11%; OR, 0.56; 95% CI, 0.39-0.81). RCHOLE also had lower conversion (0.7% vs 2.1%; p<0.001), bleeding (2.2% vs 2.6%; p<0.001), abdominal injuries (2.0% vs 2.4%; p<0.001), and 30-day reoperations (1.3% vs 1.5%; p<0.001), but longer operative time (120.7 vs 109.4 minutes; p<0.001). Readmission did not differ (4.5% vs 4.7%; p=0.14).\nCONCLUSIONS: In this contemporary observational cohort, RCHOLE was associated with lower BDI, conversion, and selected perioperative complications than LCHOLE, with longer operative time. Residual confounding remains possible.",
+     "rivista": "Journal of the American College of Surgeons",
+     "rivista_sigla": "J Am Coll Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T07:03:00",
+     "autori": [
+      "Bissell",
+      "Waghmare",
+      "Shih"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "laparoscopic cholecystectomy",
+      "cholecystectomy",
+      "bile duct injury"
+     ],
+     "keyword": 2.3,
+     "score": 52.6,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.46,
+     "c_recency": 0.577,
+     "ore_eta": 28.6,
+     "penalita_abstract": false,
+     "rank": 7
+    }
+   ],
+   "riserve": [
+    {
+     "pmid": "42862523",
+     "doi": "10.1245/s10434-026-20711-3",
+     "titolo_en": "Clinical Efficacy of Tislelizumab Plus Gemcitabine-Nab-Paclitaxel for Borderline Resectable Pancreatic Cancer and Chemoresistance Analysis: A Prospective Pilot Study.",
+     "abstract": "BACKGROUND: Neoadjuvant therapy can improve the survival outcomes of patients with borderline resectable pancreatic cancer (BRPC). However, standard neoadjuvant regimens remain lacking. This study evaluated the clinical feasibility of tislelizumab plus gemcitabine and nab-paclitaxel in the neoadjuvant setting for BRPC.\nPATIENTS AND METHODS: In this prospective study, patients with BRPC preoperatively received three cycles of tislelizumab plus gemcitabine and nab-paclitaxel, and continued postoperatively. The primary endpoints were R0 resection rate and treatment-related adverse events (TRAEs). Exploratory objectives were resistance to this regimen.\nRESULTS: Of 30 enrolled patients, 80.0% (24/30) completed neoadjuvant therapy and underwent surgical resection. R0 resection was achieved in 80.0% (24/30) of the patients and in 100.00% (24/24) of those resected. The 12-month OS and RFS rates were 87.5% (95% CI 64.3-95.8%) and 82.8% (95% CI 60-95.8%), respectively, with median RFS of 28 months (95% CI 16.9-39.1). Most TRAEs were grade I-II, with no serious events. Quantitative proteomics combined with machine learning identified NT5DC2, FAM3D, CXCL5, and TMT1B as candidate biomarkers of resistance to this neoadjuvant regimen. In paired pre- and postoperative tissues from treatment-sensitive patients, CD8+ T-cell infiltration tended to increase and CD163+ M2-like macrophages were significantly upregulated after surgery.\nCONCLUSIONS: Neoadjuvant tislelizumab plus gemcitabine and nab-paclitaxel is promising for improving the resection rate in BRPC, with a favorable safety profile. NT5DC2, FAM3D, CXCL5, and TMT1B may serve as candidate biomarkers of preoperative drug resistance, and tumor immune microenvironment (TIME) analysis further reveals immune microenvironment remodeling in postoperative tumors from treatment-sensitive patients. These findings warrant validation in larger-scale studies. Trial Registration Chinese Clinical Trial registry (ChiCTR2200063680).",
+     "rivista": "Annals of surgical oncology",
+     "rivista_sigla": "Ann Surg Oncol",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T11:49:00",
+     "autori": [
+      "He",
+      "Peng",
+      "Jiang"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "pancreatic cancer"
+     ],
+     "keyword": 1.0,
+     "score": 50.8,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.2,
+     "c_recency": 0.632,
+     "ore_eta": 23.8,
+     "penalita_abstract": false
+    },
+    {
+     "pmid": "42863682",
+     "doi": "10.1016/j.jhep.2026.09.024",
+     "titolo_en": "Abnormal left ventricular mass as a prognostic marker for outcomes in infants and children with cirrhosis.",
+     "abstract": "BACKGROUND/AIMS: Cirrhotic cardiomyopathy (CCM), a clinically consequential comorbidity of cirrhosis, remains undefined and underappreciated in children. This study aimed to characterize myocardial structural, functional, morphometric, and histopathologic features in pediatric cirrhosis and objectively derive a reliable echocardiographic (2DE) metric to predict perioperative adverse events, including mortality.\nMETHODS: 2DE, morphometry, histopathology, and vasoactive-inotropic score (VIS) were compared between children with (n=226) and without (n=160) cirrhosis listed for liver transplantation (LT) over 2011-2021. Discriminatory performance of left ventricular mass index (height)2.7(LVMI g/m2.7) for predicting waitlist decompensation, composite serious adverse events post liver transplant and mortality was assessed using ROC analysis, with AUCs and optimal thresholds compared against PELD-Cr/MELD scores.\nRESULTS: LV mass was significantly higher in children with cirrhosis on 2DE and necropsy specimens compared to non-cirrhotic controls, with ∼25% demonstrating LV hypertrophy, with OR of 6.9 [CI 3,16], p< 0.0001. In the cirrhotic cohort, LVMI correlated with vasoactive needs under stress of LT (p <0.001) and was significantly higher in patients with WLD, CSAE, and non-survivors. In cirrhosis, LVMI values ≥ 88 g/m2.7, ≥ 91 g/m2.7, and ≥ 95 g/m2.7 were independently associated with WLD, CSAE, and mortality, when adjusting for PELD-Cr/MELD, bilirubin, and INR (p <0.01). Combining LVMI + PELD-Cr/MELD significantly outperformed PELD-Cr/MELD in discriminating both WLD and CSAE, whereas LVMI alone significantly outperformed PELD-Cr/MELD for CSAE and was comparable for WLD. All three models performed comparably in discriminating death.\nCONCLUSION: LVMI is a strong predictor of morbidity and mortality, serving as a prognostic marker in children with cirrhosis. Incorporating LVMI into PELD-Cr/MELD may enhance risk stratification and organ allocation.",
+     "rivista": "Journal of hepatology",
+     "rivista_sigla": "J Hepatol",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T19:34:00",
+     "autori": [
+      "Bashir",
+      "Thadani",
+      "Nack"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "liver transplantation"
+     ],
+     "keyword": 0.7,
+     "score": 50.1,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.14,
+     "c_recency": 0.734,
+     "ore_eta": 16.1,
+     "penalita_abstract": false
+    },
+    {
+     "pmid": "42864460",
+     "doi": "10.1007/s00464-026-13456-3",
+     "titolo_en": "Modified Glissonean pedicle transection vs. hilar dissection in laparoscopic left hemihepatectomy for hepatolithiasis: a propensity score analysis (with video).",
+     "abstract": "BACKGROUND: Laparoscopic anatomical liver resection for hepatolithiasis is frequently complicated by dense hilar adhesions. Traditional hilar dissection (LHDA) is associated with biliary and vascular injury, whereas the standard Glissonean approach can be compromised by stapler failure when impacted stones are present. This study assessed the safety and efficacy of a two-step laparoscopic modified Glissonean approach (LMGA) for left-sided hepatolithiasis.\nMETHODS: This retrospective cohort study evaluated 215 consecutive patients who underwent laparoscopic anatomical left hemihepatectomy for hepatolithiasis between October 2018 and September 2025 (149 LHDA vs. 66 LMGA). Propensity score matching (1:1) yielded 48 well-balanced pairs. Perioperative outcomes, early liver function, stone clearance, and recurrence-free survival (RFS) were compared.\nRESULTS: After matching, baseline characteristics were similar between groups. The LMGA group had a shorter median operative time than the LHDA group (275 vs. 315 min, P = 0.035) and lower AST levels on postoperative day 3 (40.75 vs. 69.95 U/L, P < 0.001). Blood loss, conversion rates, and morbidity were comparable. The residual stone rate was numerically lower with LMGA, though the difference did not reach statistical significance (2.1 vs. 14.6%, P = 0.065). RFS did not differ significantly between groups (log-rank P = 0.66). In univariable Cox analysis, Child-Pugh class B, elevated preoperative bilirubin, high AST, and longer operative time were associated with shorter RFS, whereas the surgical approach was not.\nCONCLUSIONS: The \"incise‑verify‑transect\" LMGA strategy offers a safe and efficient approach to laparoscopic left hemihepatectomy. Direct-vision clearance of impacted stones helps to reduce stapler-related risks, shorten operative time, and promote earlier functional recovery, without increasing perioperative morbidity.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Liu",
+      "Yao",
+      "Chen"
+     ],
+     "segnali": [
+      "video"
+     ],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "liver resection"
+     ],
+     "keyword": 1.0,
+     "score": 45.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.2,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false
+    },
+    {
+     "pmid": "42864462",
+     "doi": "10.1007/s00464-026-13477-y",
+     "titolo_en": "A multidisciplinary analysis of 8-mm port-site hernias in 2,337 robotic ports and the realities of its risk factors.",
+     "abstract": "BACKGROUND: Port-site hernia (PSH) at 8-mm robotic trocar sites is considered uncommon, and routine fascial closure is generally not recommended. However, clinically significant PSH continues to occur, and its underlying mechanisms remain incompletely understood. This study aimed to evaluate the incidence and risk factors of 8-mm PSH after robotic-assisted surgery and to explore practical preventive strategies.\nMETHODS: We retrospectively analyzed 816 patients who underwent robotic-assisted surgery across the gastrointestinal, hepatobiliary-pancreatic, urological, and gynecological specialties between January 2020 and December 2024. A total of 2337 8-mm ports were included, all of which were left without fascial closure. Patient characteristics, port locations, drain placement and size, operative times, and perioperative factors were evaluated in patients who developed PSH.\nRESULTS: The median BMI of the overall cohort was 22.9 kg/m2 (range 11.0-48.9 kg/m2). The incidence of 8-mm PSH was 0.49% per patient (4/816) and 0.17% per port (4/2337). All PSH cases occurred at lateral abdominal wall port sites in non-obese patients (body mass index <25 kg/m2). Three of the four cases (75%) developed at drain insertion sites, and symptoms appeared shortly after drain removal. The median total operative time was 323.5 min in the PSH group versus 317 min in the non-PSH group. All hernias were Richter-type hernias. Clinical findings suggested a multifactorial mechanism involving mechanical enlargement of the fascial defect by robotic torque, impaired muscular shutter mechanisms at lateral abdominal sites, and drain-related factors that prevented spontaneous fascial closure.\nCONCLUSIONS: Eight-millimeter PSH is a rare but potentially preventable complication of robotic-assisted surgery. The risk appears to be concentrated in non-obese patients with lateral abdominal wall ports, particularly when these sites are used for drain placement. Intraoperative digital assessment of the fascial defect using the \"pinky test\" may facilitate selective fascial closure of high-risk port sites and help reduce the occurrence of this complication.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Ozawa",
+      "Shibutani",
+      "Seki"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "hepatobiliary"
+     ],
+     "keyword": 1.0,
+     "score": 45.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.2,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false
+    },
+    {
+     "pmid": "42864455",
+     "doi": "10.1007/s00464-026-13453-6",
+     "titolo_en": "Hospital capacity and operating room access for emergency general surgery patients : OR access and LOS for short-stay MIS EGS.",
+     "abstract": "BACKGROUND: Emergency general surgery (EGS) is a major driver of hospital utilization, yet system-level contributors to hospital length of stay (LOS) remain poorly defined. While delayed operative intervention may be clinically acceptable in stable patients, its impact on hospital throughput is unclear. We evaluated the association between time to operating room (OR) and LOS for common minimally invasive (MIS) EGS procedures.\nMETHODS: We performed a retrospective cohort study of adult patients undergoing non-elective MIS appendectomy or cholecystectomy on a dedicated EGS service at two community hospitals (2023-2025) using EGS-targeted NSQIP data. Time-to-OR was defined as the interval from emergency department registration to procedure start. LOS was defined as admission to discharge (LOS=0 for outpatient cases). A two-part hurdle model assessed association between time-to-OR and LOS, and multivariable logistic regression evaluated the associations between time-to-OR and 30-day readmission and 30-day emergency department (ED) visits.\nRESULTS: Among 1355 patients, median time-to-OR was 16 h (IQR 8-30); 38% underwent surgery ≤12 h and 67% within 24 h. Median LOS was 0 days. Mean LOS increased from 0.68 days among patients undergoing surgery ≤12 h to 4.62 days with delays ≥48 h (p<0.001). Adjusted hurdle models indicated that increasing time to surgery was associated with higher likelihood of inpatient admission. Among admitted patients, surgery delayed ≥48 h were associated with longer expected LOS than other categories, with an adjusted mean LOS of 6.19 days (95% CI 4.94-7.44) compared with 3.43-3.78 days for shorter delays. No association was identified between time-to-OR and 30-day readmission or 30-day ED visits.\nCONCLUSIONS: For MIS appendectomy and cholecystectomy, longer time-to-OR was independently associated with increased LOS. The increase in LOS was concentrated in the preoperative interval; postoperative LOS did not lengthen with preoperative delay. OR access represents a modifiable, system-level target for improving hospital capacity.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Miranda",
+      "Schiffern",
+      "Sherrill"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "cholecystectomy"
+     ],
+     "keyword": 0.7,
+     "score": 42.6,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.14,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false
+    }
+   ]
+  },
+  "parete": {
+   "area": "parete",
+   "areaLabel": "Parete addominale",
+   "scalino_giorni": 7,
+   "scalino_iniziale": 7,
+   "finestra": "EDAT 2026/10/07 → 2026/10/13 (7 giorni)",
+   "espressione_sintesi": "nell'ultima settimana",
+   "tetto_raggiunto": false,
+   "valutati": 7,
+   "selezionati": 7,
+   "tentativi_scalini": [
+    {
+     "scalino": 7,
+     "in_finestra": 11,
+     "scarti_obbligatori": 1,
+     "gia_usciti": 3,
+     "selezionabili": 7
+    }
+   ],
+   "pmid_oltre_14_giorni": [],
+   "articoli": [
+    {
+     "pmid": "42862386",
+     "doi": "10.1007/s10029-026-03874-6",
+     "titolo_en": "Prospective results of locally delivered low-cost mesh inguinal hernia repair in a low resource setting.",
+     "abstract": "PURPOSE: To assess patient outcomes after locally processed ultra-low-cost hernia mesh placement became routine practice in a government hospital in one of the world's poorest countries.\nMETHODS: Observational study with comprehensive prospective data collection via electronic registry from June 2023 to January 2026. Interrogation of database after 2.5 years assessed demographics, hernia types and complexity, short term complications and outcomes at 2 years.\nRESULTS: Between 01.06.2023 and 01.06.2025, 121 inguinal hernia repairs were repaired with mesh. 76% of inguinal hernias were primary and 24% were recurrent or re-recurrent. No Surgical Site Infection was seen after primary inguinal hernia repair. A 10% superficial wound infection rate was seen after repair of recurrent and re-recurrent inguinal hernias. No mesh infections occurred. Heavy use of prophylactic antibiotics was observed but reduced during the study period. This is a report of the first two years of an on-going service and patients are at varying time points post-surgery. 108 repairs (89%) were > one year post-surgery and one-year FU is documented for 108 repairs (100%). No hernia recurrences identified to date 0% 95% CI [0, 3.35]. 66 repairs were > 2 years post-surgery and 2-year FU is documented for 58 repairs (88%). No hernia recurrences identified to date 0% (95% CL: 0%, 6.16%).\nCONCLUSION: Robust, prospective outcome monitoring is feasible in low-income-countries, even outside of the clinical trial situation. Structured training and local implementation have produced good early hernia outcomes.",
+     "rivista": "Hernia : the journal of hernias and abdominal wall surgery",
+     "rivista_sigla": "Hernia",
+     "tipi": [
+      "Journal Article",
+      "Observational Study"
+     ],
+     "edat": "2026-10-12T11:23:00",
+     "autori": [
+      "Kamara",
+      "Mansaray",
+      "Lavalie"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "inguinal hernia",
+      "hernia repair",
+      "mesh infection"
+     ],
+     "keyword": 2.8,
+     "score": 70.2,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.56,
+     "c_recency": 0.792,
+     "ore_eta": 24.3,
+     "penalita_abstract": false,
+     "rank": 1
+    },
+    {
+     "pmid": "42864463",
+     "doi": "10.1007/s00464-026-13480-3",
+     "titolo_en": "Comparison of mesh infection management following ventral hernia repair with poly-4-hydroxybutyrate, synthetic, and biologic mesh: a retrospective review.",
+     "abstract": "BACKGROUND: Mesh infections are a feared complication of ventral hernia repair. This retrospective review compares infection characteristics and management among patients with poly-4-hydroxybutyrate (Phasix) and synthetic mesh while presenting biologic cases descriptively.\nMETHODS: A retrospective review was conducted of patients undergoing ventral hernia repair from 2014 to 2025. Outcomes were evaluated among patients receiving Phasix, synthetic, or biologic mesh. Primary outcomes included infection rates, microbiology, antibiotic therapy, readmission, length of stay, and need for intervention. Risk factors such as wound class, immunosuppression, and prior mesh infection were assessed.\nRESULTS: A total of 407 patients underwent ventral hernia repair with Phasix (n = 47), synthetic (n = 337), and biologic (n = 23) mesh. Mesh infections developed in six patients with Phasix, seven with synthetic, and two with biologic. Of the people with mesh infections, the Phasix group demonstrated higher rates of risk factors compared to the synthetic and biologic groups: pre-existing mesh infections (33% vs. 0% vs. 0%), CDC wound class ≥  3 (83% vs. 29% vs. 0%), and immunosuppression (33% vs. 0% vs. 0%). The bacterial profile of these mesh infections includes E. coli, Proteus mirabilis, Stenotrophomonas maltophilia, and Klebsiella pneumoniae in the Phasix group, Staphylococcus, Enterococcus faecium, and Streptococcus in the synthetic group, and Staph aureus in the biologic group. Phasix infections required a mean of 36 days of antibiotic therapy versus 15 days for synthetic and 23 days for biologic mesh (p = 0.25). Readmission rates were 67, 86, and 100%, respectively (p = 0.56). Mean hospital stays were 11, 9, and 4 days (p = 0.4). No Phasix patients required mesh excision, whereas 71.4% of synthetic mesh patients and 50% of biologic mesh patients underwent mesh explantation (p = 0.04).\nCONCLUSION: Infections involving poly-4-hydroxybutyrate mesh were successfully managed without mesh explantation in this series despite occurring in higher-risk patients. Because of the retrospective design, small sample size, and potential selection bias, these findings should be considered hypothesis-generating rather than evidence of superiority.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Dickerson",
+      "Akkihal",
+      "Ittiruck"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "ventral hernia",
+      "hernia repair",
+      "mesh infection",
+      "biologic mesh"
+     ],
+     "keyword": 3.5,
+     "score": 69.8,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.7,
+     "c_recency": 0.892,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 2
+    },
+    {
+     "pmid": "42864457",
+     "doi": "10.1007/s00464-026-13473-2",
+     "titolo_en": "Frailty and abdominal wall hernias: a Mendelian randomization and retrospective study.",
+     "abstract": "INTRODUCTION: Frailty, measured by frailty index (FI), involves a decline in the function of multiple physiological systems. It is known that the dysfunction of abdominal wall is related to the occurrence of abdominal wall hernias. In this research, we conducted a two-sample Mendelian randomization analysis to explore the causal relationship between frailty and abdominal wall hernias and did a retrospective study to evaluate the association between preoperative frailty and postoperative complications following hiatal hernia repair.\nMETHODS: Summary data of FI, hiatal hernia, femoral hernia, inguinal hernia, and other unspecified abdominal hernias were extracted from genome-wide association study. The inverse variance weighted (IVW) method was used as the core approach to assess causal effects, and other sensitivity analyses were also carried out. We conducted a retrospective analysis on patients who underwent hiatal hernia repair. Demographic, operative, and follow-up data were collected.\nRESULTS: Genetically predicted higher FI was associated with an increased risk of hiatal hernia (OR 1.020, 95% CI 1.010-1.030, P < 0.001) and remained stable in sensitivity analyses. However, there was no evidence to suggest an association between FI and an increased risk of femoral hernia (P = 0.958), inguinal hernia (P = 0.874), or other unspecified abdominal hernias (P = 0.403). In the retrospective study, severe frailty was an independent risk factor for dysphagia (P < 0.001). However, no significant associations were found between frailty and hospital stay (P = 0.419), epigastric pain (P = 0.283), gas-bloat syndrome (P = 0.926), diarrhea (P = 0.083), recurrence (P = 0.618), or quality of life (P = 0.071).\nCONCLUSIONS: Frailty is associated with an increased risk of hiatal hernia but has no causal association with femoral hernia, inguinal hernia, or other unspecified abdominal hernias. Frail patients are more likely to have dysphagia following hiatal hernia repair.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Bo",
+      "Shang",
+      "Gao"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "eso-gastrico"
+     ],
+     "termini": [
+      "inguinal hernia",
+      "femoral hernia",
+      "hernia repair"
+     ],
+     "keyword": 3.0,
+     "score": 65.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.6,
+     "c_recency": 0.892,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 3
+    },
+    {
+     "pmid": "42864464",
+     "doi": "10.1007/s00464-026-13512-y",
+     "titolo_en": "Awake laparoscopic surgery under combined spinal-epidural anesthesia: a consecutive series of 52 patients across multiple general surgical procedures.",
+     "abstract": "BACKGROUND: General anesthesia (GA) remains the standard anesthetic technique for laparoscopic surgery; however, alternative anesthetic approaches may be considered in selected patients with significant comorbidities or severe anxiety related to GA. We evaluated the feasibility and observed perioperative outcomes of awake laparoscopic surgery performed under a standardized combined spinal-epidural (CSE) anesthesia protocol across multiple general surgical procedures.\nMETHODS: We conducted a retrospective single-center case series of consecutive patients undergoing laparoscopic surgery under CSE anesthesia between September 2017 and August 2026. All procedures were performed by the same experienced laparoscopic surgeon and senior anesthesiologist using a standardized multidisciplinary protocol. The primary outcome was successful completion of the laparoscopic procedure without conversion to GA. Secondary outcomes included conversion to open surgery, postoperative complications, length of hospital stay, 30 day readmission, and mortality.\nRESULTS: Fifty-two patients were included; the mean age was 62.2 ± 19.0 years, 32 (61.5%) were male, and 29 (55.8%) were ASA physical status III. Forty-four patients (84.6%) had at least one comorbidity. Procedures included laparoscopic cholecystectomy (n = 33), inguinal hernia repair (n = 10), sleeve gastrectomy (n = 6), appendectomy (n = 2), and ventral hernia repair (n = 1). Fifty procedures (96.2%) were completed without conversion to GA. Two patients (3.8%) required conversion to GA, and one (1.9%) required conversion to open surgery without GA. Postoperative complications occurred in five patients (9.6%), including one Clavien-Dindo grade IVa complication. Median hospital stay was 1 day (IQR, 1-1). There were no 30-day readmissions or deaths.\nCONCLUSION: Laparoscopic surgery under CSE anesthesia appears feasible in carefully selected patients when performed by an experienced multidisciplinary team using a standardized perioperative protocol. The technique was successfully applied across multiple general surgical laparoscopic procedures and patients with varying degrees of anesthetic risk, with a 96.2% completion rate without conversion to GA. Prospective controlled multicenter studies are warranted to further evaluate comparative safety, procedure-specific outcomes, and optimal patient selection.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Halawani",
+      "Khalifeh",
+      "Saleh"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "hpb",
+      "eso-gastrico"
+     ],
+     "termini": [
+      "inguinal hernia",
+      "ventral hernia",
+      "hernia repair"
+     ],
+     "keyword": 3.0,
+     "score": 65.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.6,
+     "c_recency": 0.892,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 4
+    },
+    {
+     "pmid": "42864466",
+     "doi": "10.1007/s00464-026-13501-1",
+     "titolo_en": "Surgical outcomes and postoperative sexual function after vNOTES versus TU-LESS ovarian cystectomy: a randomized controlled trial.",
+     "abstract": "OBJECTIVE: To compare surgical outcomes and sexual function after Transvaginal natural orifice transluminal endoscopic surgery (vNOTES) versus transumbilical laparoendoscopic single-site surgery (TU-LESS) ovarian cystectomy.\nDESIGN: Randomized controlled trial.\nSETTING: A university-affiliated tertiary women's and children's hospital.\nPOPULATION: 160 women with benign ovarian cysts randomized 1:1 to vNOTES or TU-LESS.\nMETHODS: After written informed consent, candidates underwent two-step eligibility assessment before and after anesthesia to confirm suitability for both approaches. Participants were then randomly assigned to vNOTES or TU-LESS ovarian cystectomy. Perioperative outcomes were prospectively collected. Pain was assessed using a visual analogue scale at 12, 24, and 48 h. Cosmetic satisfaction was evaluated at 1 month, and sexual function was assessed preoperatively and at 3-6 months using the Female Sexual Function Index.\nMAIN OUTCOME MEASURES: Conversion, operative outcomes, complications, recovery, pain, cosmetic satisfaction, and sexual function.\nRESULTS: No conversion occurred. Intraoperative complications, operative time, blood loss, postoperative complications (5.0% vs 3.8%), rescue analgesic use, wound events, incisional hernia, and postoperative FSFI scores between 3rd and 6th postoperative months were comparable between vNOTES and TU-LESS groups. vNOTES yielded lower pain scores at 12, 24, and 48 h, shorter total and postoperative hospital stay, and higher cosmetic satisfaction (all p < 0.001).\nCONCLUSION: vNOTES ovarian cystectomy demonstrated perioperative safety and postoperative sex function comparable to TU-LESS, while offering superior early postoperative pain control, shorter hospitalization, and better cosmetic satisfaction.\nTRIAL REGISTRATION: ChiCTR2100053483, registered on 22 November 2021 ( https://www.chictr.org.cn/showprojEN.html?proj=136407 ).",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Chen",
+      "Feng",
+      "Liu"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "incisional hernia"
+     ],
+     "keyword": 1.0,
+     "score": 47.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.2,
+     "c_recency": 0.892,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 5
+    },
+    {
+     "pmid": "42862291",
+     "doi": "10.1007/s00464-026-13462-5",
+     "titolo_en": "Quantification of tension during cruroplasty of robotic-assisted hiatal hernia repairs using force feedback instruments on the da Vinci surgical platform (dV5).",
+     "abstract": "BACKGROUND: Tension-free crural closure is critical for durable hiatal hernia repair. Historically, quantifying crural closure tension (CCT) required workflow-disrupting external gauges. The da Vinci 5 (dV5) platform's integrated force feedback allows instantaneous, device-free tension monitoring. This study quantifies in vivo CCT during robotic hiatal hernia repair (RHHR) and introduces an exploratory metric, the Crural Stiffness Index (CSI), defined as peak force per centimeter of crural displacement.\nMETHODS: A retrospective cohort analysis evaluated 76 patients undergoing RHHR at a single institution by a single surgeon using the dV5 system with force feedback instruments between January 2024 and December 2025. Using a standardized tension measurement protocol (TMP), controlled traction was applied to approximate the crura while recording continuous force telemetry. Primary outcomes were mean force, peak force, and CSI during closure.\nRESULTS: Mean hiatal defect width was 2.16 ± 0.75 cm. Mean force within the calibrated measurement range (≤ 6.5 N) (2.92 ± 0.75 N) remained consistent regardless of defect size (p = 0.276). Peak force averaged 9.60 ± 2.79 N, significantly correlating with defect width; large hernias (> 2.0 cm) required higher tension than small hernias (10.38 vs. 8.78 N, p = 0.011). The cohort's mean CSI was 6.09 ± 2.12 N/cm. CSI did not significantly differ between large and small defects (p = 0.888), suggesting intrinsic compliance is independent of initial hernia size.\nCONCLUSIONS: Using the dV5 and a standardized TMP, this study reliably quantified, in vivo, CCT during robotic hiatal hernia repairs. While mean forces remained uniform, peak forces significantly increased with larger defect widths. CSI suggested that crural compliance may be independent of hernia size. As a proof of concept, crural tensiometry is feasible within standard robotic workflow. The exploratory CSI requires prospective validation against clinical outcomes before it can guide operative decisions.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T11:13:00",
+     "autori": [
+      "Ngo",
+      "Langroodi",
+      "Gatta"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "eso-gastrico"
+     ],
+     "termini": [
+      "hernia repair"
+     ],
+     "keyword": 1.0,
+     "score": 45.2,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.2,
+     "c_recency": 0.79,
+     "ore_eta": 24.4,
+     "penalita_abstract": false,
+     "rank": 6
+    },
+    {
+     "pmid": "42842969",
+     "doi": "10.1016/j.amjsurg.2026.117263",
+     "titolo_en": "To block or not to block: A propensity score matched analysis of TAP blocks in ventral hernia repairs.",
+     "abstract": "BACKGROUND: Transversus abdominis plane (TAP) blocks reduce opioid use and improve pain control. We aimed to assess whether this improves pain control and early post-operative complications after ventral hernia repair (VHR).\nMETHODS: We performed a retrospective study using the Abdominal Core Health Quality Collaborative (2014- 2023) comparing patients with TAP blocks. Primary outcomes included length of stay (LOS) and post-operative pain at 1-, 3-, 6-, and 12 months. Secondary outcomes included 30-day rates of ileus, deep venous thrombosis, pneumonia, and intubations.\nRESULTS: Among 21,608 patients, 1688 (7.8%) received a TAP block. After matching, TAP block use was associated with a higher rate of \"no pain\" at 6 months; however, there were no other significant differences in the primary or secondary outcomes, including binary pain scores at any follow-up interval.\nCONCLUSION: TAP blocks may have some benefit in post-operative pain control for patients with ventral hernias, however further studies are needed.",
+     "rivista": "American journal of surgery",
+     "rivista_sigla": "Am J Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-07T18:00:00",
+     "autori": [
+      "Goto",
+      "Satija",
+      "Renshaw"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "ventral hernia",
+      "hernia repair"
+     ],
+     "keyword": 2.0,
+     "score": 43.7,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.4,
+     "c_recency": 0.266,
+     "ore_eta": 137.7,
+     "penalita_abstract": false,
+     "rank": 7
+    }
+   ],
+   "riserve": []
+  },
+  "colon-retto": {
+   "area": "colon-retto",
+   "areaLabel": "Colon-retto",
+   "scalino_giorni": 3,
+   "scalino_iniziale": 3,
+   "finestra": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+   "espressione_sintesi": "nelle ultime 72 ore",
+   "tetto_raggiunto": false,
+   "valutati": 6,
+   "selezionati": 6,
+   "tentativi_scalini": [
+    {
+     "scalino": 3,
+     "in_finestra": 9,
+     "scarti_obbligatori": 3,
+     "gia_usciti": 0,
+     "selezionabili": 6
+    }
+   ],
+   "pmid_oltre_14_giorni": [],
+   "articoli": [
+    {
+     "pmid": "42861639",
+     "doi": "10.1097/DCR.0000000000004495",
+     "titolo_en": "Diagnosis and Management of HIV-Associated Colitis.",
+     "abstract": "A 63-year-old male with a history of untreated HIV presented to the emergency room with acute on chronic watery diarrhea, weight loss, fatigue, fever and chills. His vital signs were within normal limits and his abdomen was soft, nondistended and tender to palpation in 4 quadrants without peritonitis. He did not have leukocytosis on presentation. CD4 count was 310. CT scan showed inflammatory changes in the rectum and sigmoid colon. Comprehensive infectious workup was negative for any pathogens including cytomegalovirus (CMV), cryptosporidium, chlamydia, gonorrhea, C. difficile, cryptococcus, tuberculosis (TB) and herpes simplex virus (HSV). Colonoscopy was performed and showed a continuous area of nonbleeding ulcerated mucosa in the rectum, sigmoid, descending and transverse colon (Fig. 1). Pancolonic biopsies revealed active colitis with focal areas of basal plasmacytosis and crypt branching in left colon, suggestive of acute on chronic colitis and possible ulcerative colitis (UC). Gastroenterology and infectious disease were consulted and patient was started on IV methylprednisolone for presumed UC flare. Over the next few weeks, the patient proceeded to develop melena as well as increased lower abdominal and pelvic pain with intermittent fevers despite IV steroid treatment. The patient was trialed on IV infliximab also without significant improvement. After several weeks of steroid and biologic treatment, he developed increased abdominal pain with tachycardia and hemodynamic instability. His examination was significant for peritonitis with abdominal distension concerning for fulminant colitis. Colorectal surgery was consulted and proceeded to do an emergent total abdominal colectomy and end ileostomy. Intraoperatively he was found to have a small anterior distal rectal perforation. The decision was made to drain this area widely with rectal drain and fecal diversion and start him on IV antibiotic therapy. His final pathology from the index operation showed ulceration and acute colitis. There was no chronic crypt architectural distortion such as crypt dropout, disarray, crypt branching or basal plasmacytosis that are often seen in inflammatory bowel disease (IBD). There was also increased apoptotic bodies and mitoses that were not consistent with IBD. After reviewing the clinical presentation, his disease progression, and final pathology, the treating team diagnosed the patient with HIV-associated colitis.",
+     "rivista": "Diseases of the colon and rectum",
+     "rivista_sigla": "Dis Colon Rectum",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T06:05:00",
+     "autori": [
+      "Fairen Oro",
+      "Beresneva"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "colectomy",
+      "ulcerative colitis",
+      "ileostomy",
+      "colonoscopy"
+     ],
+     "keyword": 3.3,
+     "score": 70.2,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.66,
+     "c_recency": 0.566,
+     "ore_eta": 29.6,
+     "penalita_abstract": false,
+     "rank": 1
+    },
+    {
+     "pmid": "42864471",
+     "doi": "10.1007/s00464-026-13519-5",
+     "titolo_en": "Association of the transanal approach with the accuracy of distal margin achievement in rectal cancer surgery.",
+     "abstract": "BACKGROUND: Adequate distal margin (DM) achievement is essential in oncological rectal cancer surgery. In conventional transabdominal surgery, however, the intraluminal location of the distal tumor edge must be translated to an externally applied transection line; this potentially causes discrepancies between intended and achieved margins. This study aimed to evaluate the discrepancy between the planned intraoperative DM and the margin achieved in rectal cancer resection, identify factors associated with DM discrepancy, and evaluate the association between the transanal approach, specifically transanal total mesorectal excision, and DM accuracy.\nMETHODS: This retrospective cohort study included 171 consecutive patients who underwent curative-intent laparoscopic or robot-assisted low anterior resection (LAR) or intersphincteric resection between July 2019 and June 2025. The intended DM in operative records was compared with the pathological DM measured in formalin-fixed specimens. The primary outcome was the absolute DM discrepancy. As the distribution was skewed, adjusted median regression was performed using the transanal approach, intended DM, tumor distance from the anal verge, maximum tumor size, surgical platform, and surgical era as covariates.\nRESULTS: The median absolute DM discrepancy was 4.0 mm and was smaller with than without the transanal approach (3.0 vs. 6.0 mm; p < 0.001). After adjustment, transanal approach omission was associated with greater absolute DM discrepancy (β, 3.938 mm; 95% confidence interval [CI] 1.848-6.027; p < 0.001). Greater maximum tumor size was also associated with greater discrepancy (β per 1-mm increase, 0.075 mm; 95% CI 0.040-0.110; p < 0.001). This association remained consistent in sensitivity analyses restricted to LAR and after exclusion of scar-based pathological DM measurements.\nCONCLUSIONS: The transanal approach was associated with a smaller discrepancy between intended and achieved DMs after adjustment for tumor characteristics, surgical platform, and surgical era. Assessing the distal tumor edge and intended transection line within the same transanal operative field may facilitate more precise DM control.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Shiraishi",
+      "Endo",
+      "Ozawa"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "rectal cancer",
+      "total mesorectal excision",
+      "anterior resection"
+     ],
+     "keyword": 2.9,
+     "score": 62.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.58,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 2
+    },
+    {
+     "pmid": "42860497",
+     "doi": "10.1245/s10434-026-20724-y",
+     "titolo_en": "Single-Incision Plus One Robot-Assisted Abdominoperineal Resection Using the Hugo RAS System Through a Planned Stoma Site: A Novel Reduced-Port Robotic Surgery.",
+     "abstract": "BACKGROUND: Reduced-port surgery has been developed to minimize abdominal wall trauma while maintaining the benefits of minimally invasive surgery. However, reduced-port robotic rectal surgery remains technically challenging due to interference of external arms. The modular design of the Hugo RAS system (Medtronic, Minneapolis, MN, USA) provides greater flexibility in arm positioning to minimize external arm interference without compromising instrument maneuverability1-4.\nMETHODS: In abdominoperineal resection (APR), the incision for a permanent colostomy is inevitable. We report the first case of completely robot-assisted APR performed using the Hugo RAS system through a planned stoma site. Three robotic trocars were inserted through the planned left lower-quadrant stoma site, and one arm through the right lower quadrant. We call this approach SIPORS, Single-Incision Plus One Robot-assisted Surgery. The procedure is presented in the accompanying video.\nRESULTS: As the first case, a 50-year-old woman with rectal cancer underwent APR after systemic chemotherapy. The console time was 167 min. The procedure was completed without significant robotic arm interference. The postoperative course was uneventful except for transient cystitis. The circumferential and distal resection margins were 3 and 35 mm, respectively. The mesorectal specimen was complete, 25 lymph nodes were harvested, and the pathological stage was pT3N2bM1.\nCONCLUSIONS: SIPORS using the Hugo RAS at a planned stoma site was technically feasible and achieved an oncologically acceptable resection in this patient. It may offer improved cosmesis, reduced postoperative pain, fewer wound complications, and a lower risk of trocar-site incisional hernia. Further experience is needed to confirm its reproducibility and clinical benefits.",
+     "rivista": "Annals of surgical oncology",
+     "rivista_sigla": "Ann Surg Oncol",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-11T23:50:00",
+     "autori": [
+      "Matsuda",
+      "Itatani",
+      "Maeda"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "parete"
+     ],
+     "termini": [
+      "rectal cancer",
+      "colostomy",
+      "stoma"
+     ],
+     "keyword": 2.5,
+     "score": 61.7,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.5,
+     "c_recency": 0.502,
+     "ore_eta": 35.8,
+     "penalita_abstract": false,
+     "rank": 3
+    },
+    {
+     "pmid": "42861640",
+     "doi": "10.1097/DCR.0000000000004490",
+     "titolo_en": "Provider Knowledge, Risk Perceptions, and Communication Readiness Drive Discussions about Early-Onset Colorectal Cancer: A National Survey of US Healthcare Providers.",
+     "abstract": "BACKGROUND: The incidence of early-onset colorectal cancer continues to increase among adults younger than 50 years, yet delays in diagnosis remain common.\nOBJECTIVE: As an initial step of the Early-Onset Colorectal Cancer Awareness campaign, we evaluated U.S. healthcare providers' knowledge, attitudes, diagnostic practices, and perceived barriers related to the timely recognition and evaluation of early-onset colorectal cancer.\nDESIGN: This survey established baseline measures for a national early-onset colorectal cancer awareness campaign.\nSETTING: We conducted a national cross-sectional survey of physicians, nurse practitioners, and physician assistants practicing family medicine, internal medicine, emergency medicine/urgent care, and obstetrics and gynecology.\nMAIN OUTCOME MEASURES: The survey assessed early-onset colorectal cancer awareness, screening recommendations, evaluation of symptomatic younger adults, perceived barriers to diagnosis, and educational needs. Descriptive statistics summarized responses, and multivariable regression identified factors associated with guideline-concordant screening and diagnostic evaluation.\nRESULTS: A total of 277 providers completed the survey. Although 87% were concerned or very concerned about early-onset colorectal cancer and 82% reported increased concern over the preceding five years, providers identified substantial barriers to timely diagnosis. Approximately one-half reported that younger adults commonly experienced symptoms for four months or longer before seeking care. The most frequently cited barriers included patients expecting symptoms to resolve (84%), insurance and financial barriers (79%), reluctance to undergo colonoscopy (77%), and failure to recognize symptoms as serious (65%). Most providers (79%) identified additional guidance on early-onset colorectal cancer symptoms, risk factors, and diagnostic evaluation as the educational resource most likely to improve care.\nCONCLUSIONS: Despite widespread awareness of the increasing incidence of early-onset colorectal cancer, patient- and system-level barriers continue to delay diagnosis in younger adults. These findings identify opportunities for targeted education, clinical decision support, and health system interventions to promote timely evaluation of symptomatic patients and improve early detection of early-onset colorectal cancer. See Video Abstract.",
+     "rivista": "Diseases of the colon and rectum",
+     "rivista_sigla": "Dis Colon Rectum",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T06:05:00",
+     "autori": [
+      "Butcher",
+      "Fassler",
+      "Bedell"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "colorectal cancer",
+      "colonoscopy"
+     ],
+     "keyword": 1.7,
+     "score": 55.8,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.34,
+     "c_recency": 0.566,
+     "ore_eta": 29.6,
+     "penalita_abstract": false,
+     "rank": 4
+    },
+    {
+     "pmid": "42864467",
+     "doi": "10.1007/s00464-026-13471-4",
+     "titolo_en": "Implementation of a single-port robotic platform into your colorectal surgery practice: a SAGES colorectal committee task force review of evolving robotic technology and innovations.",
+     "abstract": "BACKGROUND: Robotic and endoscopic techniques continue to revolutionize minimally invasive surgery. Single-port (SP) robotic platforms mark a new era in minimally invasive colorectal surgery, combining single-incision/site access with full robotic articulation through a single access point. This manuscript, as a part of a four-part series, outlines specific technical considerations of the SP robotic platform including details of the platform, instrumentation, docking, and operative maneuvers.\nMETHODS: Subject matter experts from the SAGES Colorectal Committee SP Task Force performed a structured review of the currently FDA-approved SP robotic platform, assessing technical features, instrumentation, and workflow considerations for several key representative operations relevant to colorectal surgery. Three clinical areas of SP implementation included transanal robotic surgery, right colectomy, and low anterior resection (LAR). Task Force members (subject matter experts with early experience in SP robotic platforms) analyzed technical details, patient selection, and operative workflows. Representative procedural techniques were detailed with emphasis on instrumentation choice, docking strategies, and key operative steps specific to single-port colorectal surgery.\nRESULTS: The technical aspects of the SP platform include full robotic articulation through a single 25 mm port. A SP approach also enables triangulation and dexterity within confined spaces using three wristed instruments and a flexible 3-D camera. The current 360-degree boom rotation facilitates multi-quadrant manipulation without redocking. Current limitations may include continued reliance on bedside assistance for certain energy and stapling operative steps, although stapling capability has expanded with FDA clearance of an SP-compatible 45 mm stapler as of April 2025. Training of the entire operative team and gradual progression of case complexity is recommended as the surgeon implements this new technology into clinical practice.\nCONCLUSIONS: A SP robotic approach to minimally invasive colorectal surgical procedures is feasible for a range of colorectal surgery operations. In select procedures like SP TAMIS, SP right colectomy, and SP-LAR, the single-port platform appears to offer advantages related to reduced invasiveness and improved surgeon ergonomics compared to other minimally invasive approaches. Successful implementation requires structured training, careful patient selection, and adherence to evidence-based adoption principles.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Sarin",
+      "Dourado",
+      "Seffren"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "colectomy",
+      "anterior resection"
+     ],
+     "keyword": 1.8,
+     "score": 52.5,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.36,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 5
+    },
+    {
+     "pmid": "42864469",
+     "doi": "10.1007/s00464-026-13429-6",
+     "titolo_en": "TRIDENT: inTRaoperative Imaging DEvice based on endogeNous opTical properties to evaluate bowel oxygenation in left-sided colorectal resections. Observational first-in-human pilot safety trial.",
+     "abstract": "BACKGROUND: Adequate tissue oxygenation at the anastomotic site is a key determinant of healing after colorectal surgery. Current intraoperative imaging technologies aimed at assessing bowel perfusion present several limitations, including the need for exogenous contrast agents, limited quantification capabilities, or suboptimal integration within the surgical workflow. Single Snapshot Imaging of Optical Properties (SSOP) is a contrast-free optical imaging technology capable of quantifying tissue oxygen saturation (StO2) in real time. This first-in-human observational study aimed to evaluate the intraoperative safety and technical feasibility of SSOP imaging using the Trident system during left-sided colorectal resections.\nMETHODS: In this prospective, single-center feasibility trial, patients undergoing elective left-sided colorectal resection with primary anastomosis were enrolled. After bowel exteriorization, surgeons identified the intended proximal transection line based on their clinical judgement. SSOP imaging was then performed to quantify tissue oxygenation along the exposed colon segment before resection. The primary endpoints of the study were assessing the overall intraoperative safety and workflow feasibility of the Trident system. The secondary endpoint was to obtain wide-field oxygen saturation (StO2) status images of exteriorized human colon and studying the relationship between oxygen saturation images and a priori surgeon-determined transection lines.\nRESULTS: Between September 2023 and April 2024, 10 patients were enrolled (8 males; mean age 65.5 ± 11.8 years; mean BMI 27.5 ± 4.6 kg/m2). SSOP imaging was successfully completed in 9 patients. The mean time required for device positioning and image acquisition was 4.45 ± 0.53 min. Surgeons rated the overall workflow as excellent or good in 100% of cases and no sterility breaches occurred. Quantitative SSOP analysis demonstrated that a priori surgeon-defined transection lines coincided with regions presenting maximal oxygenation in one of the nine cases; in all other cases, transection lines were located well within perfused tissue or proximal to oxygenation transition zones identified by SSOP. No anastomotic leaks were observed.\nCONCLUSIONS: This first-in-human study demonstrated that SSOP imaging using Trident is safe, feasible, and compatible with standard surgical workflow during left-sided colorectal resections. The ability to provide real-time, quantitative, contrast-free mapping of bowel oxygenation may represent a promising tool for intraoperative perfusion assessment. Larger prospective studies are needed to evaluate whether SSOP-guided surgery can improve anastomotic outcomes (NCT05973227).",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Lapergola",
+      "Baratelli",
+      "Shein"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "anastomotic leak"
+     ],
+     "keyword": 0.9,
+     "score": 44.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.18,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 6
+    }
+   ],
+   "riserve": []
+  },
+  "eso-gastrico": {
+   "area": "eso-gastrico",
+   "areaLabel": "Esofago-gastrico",
+   "scalino_giorni": 3,
+   "scalino_iniziale": 3,
+   "finestra": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+   "espressione_sintesi": "nelle ultime 72 ore",
+   "tetto_raggiunto": false,
+   "valutati": 5,
+   "selezionati": 5,
+   "tentativi_scalini": [
+    {
+     "scalino": 3,
+     "in_finestra": 5,
+     "scarti_obbligatori": 0,
+     "gia_usciti": 0,
+     "selezionabili": 5
+    }
+   ],
+   "pmid_oltre_14_giorni": [],
+   "articoli": [
+    {
+     "pmid": "42862453",
+     "doi": "10.1007/s11695-026-08981-y",
+     "titolo_en": "Five-Year Outcomes of Sleeve Gastrectomy with Transit Bipartition in Women with Severe Obesity and Insulin-Treated Type 2 Diabetes: A Prospective Single-Center Cohort Study of 35 Women.",
+     "abstract": "INTRODUCTION: Five-year data on metabolic durability, nutritional outcomes, and late morbidity after sleeve gastrectomy with transit bipartition (SG + TB) remain limited. We evaluated glycemic, weight, nutritional, and safety outcomes in women with severe obesity and insulin-treated type 2 diabetes mellitus (T2DM).\nMETHODS: This prospective single-center follow-up included 35 women who underwent laparoscopic SG + TB in 2016-2017. At 5 years, 30/35 (85.7%) retained SG + TB anatomy and had complete efficacy data; weight and HbA1c were available in one additional revised patient (31/35, 88.6%). T2DM remission was defined as HbA1c < 6.5% at least 3 months after stopping glucose-lowering pharmacotherapy. Nutritional assessment used a prespecified limited biochemical panel.\nRESULTS: In the 30-patient anatomy-retained complete-case cohort, mean HbA1c decreased from 9.2 ± 1.0% to 5.5 ± 0.7%, body weight from 118.0 ± 10.6 to 75.6 ± 6.8 kg, and mean total weight loss was 35.7 ± 5.1%. Medication-free T2DM remission was 23/30 (76.7%; 95% CI, 59.1-88.2%); the conservative all-enrolled estimate was 23/35 (65.7%; 95% CI, 49.2-79.2%). At year 5, hypoalbuminemia was 20.0%, low serum iron 30.0%, vitamin B12 deficiency 13.3%, and vitamin D deficiency 73.3%; 27/30 (90.0%) had at least one predefined biochemical abnormality. Two patients required an SG + TB-related invasive intervention, including one revision; two additional patients underwent laparoscopic cholecystectomy.\nCONCLUSION: SG + TB was associated with substantial 5-year weight loss and glycemic improvement, but the lower all-enrolled remission estimate highlights attrition and revision-related exclusion. Biochemical abnormalities and clinically important gastrointestinal morbidity show that preserved duodenal continuity does not eliminate potential hypoabsorptive consequences. Lifelong metabolic and nutritional surveillance is warranted.",
+     "rivista": "Obesity surgery",
+     "rivista_sigla": "Obes Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T11:42:00",
+     "autori": [
+      "Bilecik"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "hpb"
+     ],
+     "termini": [
+      "gastrectomy",
+      "sleeve gastrectomy",
+      "duodenal"
+     ],
+     "keyword": 2.7,
+     "score": 57.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.54,
+     "c_recency": 0.631,
+     "ore_eta": 23.9,
+     "penalita_abstract": false,
+     "rank": 1
+    },
+    {
+     "pmid": "42860495",
+     "doi": "10.1245/s10434-026-20729-7",
+     "titolo_en": "Robotic versus Conventional Minimally Invasive Esophagectomy for Resectable Esophageal Cancer After Neoadjuvant Therapy: A Dual-Center Retrospective Study.",
+     "abstract": "OBJECTIVES: Data on robot-assisted minimally invasive esophagectomy (RAMIE) after neoadjuvant therapy, particularly after neoadjuvant immunochemoradiotherapy, remain scarce. This study compares the perioperative outcomes of RAMIE versus conventional minimally invasive esophagectomy (MIE) in patients with resectable esophageal cancer after neoadjuvant therapy.\nMETHODS: We conducted a dual-center, retrospective study of consecutive patients with esophageal cancer who underwent MIE after neoadjuvant chemoradiotherapy or neoadjuvant immunochemoradiotherapy between 2020 and 2025. Propensity score matching was applied based on preoperative variables. Perioperative outcomes were analyzed.\nRESULTS: After 1:1 propensity score matching, 137 patients were allocated to each group. The RAMIE group demonstrated a higher rate of left recurrent laryngeal nerve lymph node dissection (67.9% vs. 53.3%, p = 0.02) and yielded more lymph nodes in this station after neoadjuvant chemoradiotherapy (mean 1.6 vs. 1.0, p = 0.02). However, RAMIE was associated with a higher overall incidence of postoperative complications (38.0% vs. 24.8%, p = 0.03). No significant differences were observed in operation time, pathological complete response rate, severe complications, length of stay, 30-day readmission, or 90-day mortality.\nCONCLUSIONS: In expert hands, RAMIE achieves perioperative safety comparable to that with MIE after neoadjuvant therapy and offers a superior ability to dissect critical lymph node stations. This technical advantage establishes RAMIE as a viable and promising surgical option, warranting further prospective investigation in randomized trials.",
+     "rivista": "Annals of surgical oncology",
+     "rivista_sigla": "Ann Surg Oncol",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-11T23:50:00",
+     "autori": [
+      "Shen",
+      "Li",
+      "He"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "esophagectomy",
+      "esophageal cancer"
+     ],
+     "keyword": 2.0,
+     "score": 57.2,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.4,
+     "c_recency": 0.502,
+     "ore_eta": 35.8,
+     "penalita_abstract": false,
+     "rank": 2
+    },
+    {
+     "pmid": "42864454",
+     "doi": "10.1007/s00464-026-13467-0",
+     "titolo_en": "Feasibility of a tubeless enhanced recovery strategy in non-high-risk patients undergoing laparoscopy-assisted gastrectomy for gastric cancer.",
+     "abstract": "BACKGROUND: Although nasogastric decompression, nasojejunal feeding, and abdominal drainage tubes are not routinely recommended in Enhanced Recovery After Surgery (ERAS) guidelines for gastrectomy, evidence regarding the avoidance of any inserted tubes after laparoscopic gastrectomy remains limited. This study aimed to evaluate the short-term feasibility and clinical outcomes of an ERAS-tubeless protocol in gastric cancer patients undergoing non-high-risk laparoscopy-assisted gastrectomy.\nMETHODS: At a high-volume center, eligible patients of gastric cancer (cT1-4N0-3M0) who lacked protocol-defined high-risk features were enrolled in this prospective non-randomized controlled study. Patients were allocated to either the ERAS-tubeless group or the ERAS-tube group at a predefined 1:1 ratio according to a team-level allocation protocol. All patients underwent laparoscopy-assisted gastrectomy following strict and consistent quality control standards and received distinct ERAS-based postoperative tube-management strategies. The primary outcome was postoperative hospital stay, and secondary outcomes included postoperative quality of life scores and the incidence of complications.\nRESULTS: Between March 2023 and September 2024, 220 patients were allocated, and 205 were included in the per-protocol population after post-allocation exclusions. The ERAS-tubeless group had a shorter mean postoperative hospital stay (6.0 vs. 7.3 days; P < 0.001). After Benjamini-Hochberg adjustment for multiple comparisons, QoR-15 scores remained significantly higher on postoperative days 1 and 3. For the EORTC QLQ-C30, significant between-group differences persisted in global health and QoL, emotional functioning, and social functioning domains. No increase in the incidence of early postoperative complications was observed; however, the study was underpowered to exclude rare but serious adverse events.\nCONCLUSIONS: In non-high-risk patients with gastric cancer, implementation of the ERAS-tubeless strategy following laparoscopy-assisted gastrectomy under a rigorous surgical quality control system can facilitate postoperative recovery, enhance patient experience, and not increase the risk of early postoperative complications, which warrants further validation.",
+     "rivista": "Surgical endoscopy",
+     "rivista_sigla": "Surg Endosc",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T23:49:00",
+     "autori": [
+      "Zhang",
+      "Zhou",
+      "Yu"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "gastrectomy",
+      "gastric cancer"
+     ],
+     "keyword": 2.0,
+     "score": 54.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.4,
+     "c_recency": 0.796,
+     "ore_eta": 11.8,
+     "penalita_abstract": false,
+     "rank": 3
+    },
+    {
+     "pmid": "42863699",
+     "doi": "10.1016/j.gassur.2026.102628",
+     "titolo_en": "Surgical management of gastric gastrointestinal stromal tumors: a tertiary center experience over 16 years.",
+     "abstract": "BACKGROUND: Complete surgical resection is the mainstay of curative treatment for gastric gastrointestinal stromal tumors (GISTs). This study characterized outcomes of surgical management at a tertiary esophagogastric center, comparing operative approaches and examining factors that influence recurrence and disease-related mortality.\nMETHODS: Patients undergoing resection for gastric GIST between June 2009 and May 2025 were identified from a prospectively maintained database. Risk was stratified by the Miettinen and Lasota criteria. Survival was estimated by the Kaplan-Meier method and compared by log-rank test; laparoscopic and open wedge resections were compared directly.\nRESULTS: Eighty-five patients were included. Laparoscopic resection rose from 11.4% (2009-2016) to 48.0% (2017-2025; P =.001). R0 resection was achieved in 94.1%, with no in-hospital mortality and 27.1% morbidity. Over a median of 7.2 years, 6 patients (7.1%) recurred, and 2 (2.4%) died of GIST. Five-year disease-specific survival (DSS) and recurrence-free survival (RFS) were 98.5% and 95.9%, respectively. Outcomes were risk-stratified: 10-year DSS was 83.3% in high-risk vs 100% in lower-risk disease (P =.010), and 10-year RFS was 69.7% vs 100% (P <.001). Laparoscopic and open wedge resections were size- and risk-matched, with no excess morbidity, rupture, involved margins, or recurrence after laparoscopy, which was extended to tumors of 120 mm. Recurrence was associated with tumor size (142 vs 51 mm; P =.018) and rupture (25.0% vs 2.9%; P =.010).\nCONCLUSION: Gastric GIST is managed surgically with low morbidity, no perioperative mortality, and high R0 rates. Recurrence and disease-specific mortality concentrate in high-risk, larger, and ruptured tumors, supporting risk stratification and adjuvant imatinib. Laparoscopic wedge resection carried no oncologic penalty in matched tumors.",
+     "rivista": "Journal of gastrointestinal surgery : official journal of the Society for Surgery of the Alimentary Tract",
+     "rivista_sigla": "J Gastrointest Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T19:35:00",
+     "autori": [
+      "Anderson",
+      "Douglass",
+      "Williams"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "esophagogastric",
+      "GIST"
+     ],
+     "keyword": 1.7,
+     "score": 50.4,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.34,
+     "c_recency": 0.734,
+     "ore_eta": 16.1,
+     "penalita_abstract": false,
+     "rank": 4
+    },
+    {
+     "pmid": "42862441",
+     "doi": "10.1007/s13304-026-02886-2",
+     "titolo_en": "Global research trends and emerging hotspots in endoscopic sleeve gastroplasty: a bibliometric and visualization analysis.",
+     "abstract": "This bibliometric study systematically explores the global research status, evolutionary trends and emerging research hotspots of endoscopic sleeve gastroplasty (ESG), aiming to clarify the future research priorities in this field. Based on the publications retrieved from the Web of Science Core Collection from its inception to April 13, 2026, the study adopted CiteSpace 6.4.R1, VOSviewer 1.6.18 and BiblioVista software to comprehensively analyze the publication characteristics of ESG research, including publication trends, source journals, contributing countries and institutions, productive authors, citation rules, as well as keyword co-occurrence, cluster distribution and citation burst features. A total of 273 eligible publications from 95 academic journals were included in the final analysis, and the number of relevant studies has grown rapidly since 2018. Among all publication sources, Obesity Surgery contributed the most ESG-related papers, while the United States dominated the field with 154 publications and 4,463 cumulative citations. Highly cited and co-cited literatures primarily focused on the technical feasibility, weight-loss efficacy, clinical safety and long-term clinical outcomes of ESG. Keyword analysis revealed that the current research mainstream mainly covers four core themes: weight-loss outcomes evaluation, clinical safety assessment, endoscopic gastric remodeling technology, and comparative analysis between ESG and laparoscopic sleeve gastrectomy (LSG). Temporal evolution and citation burst analyses further demonstrated the developmental trajectory of ESG research, which has shifted from early-stage technical exploration to clinical effect verification and comparative research, with growing attention paid to standardized clinical application in recent years. Overall, ESG research has achieved rapid development and gradually transformed toward evidence-based clinical evaluation, with current studies centering on the efficacy, safety, comparative clinical value and standardized application of the technique. Future ESG research should focus on conducting high-quality randomized controlled trials, formulating unified evaluation standards for clinical outcomes, carrying out long-term patient follow-up studies, and optimizing the scientific selection criteria for applicable patients.",
+     "rivista": "Updates in surgery",
+     "rivista_sigla": "Updates Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-10-12T11:41:00",
+     "autori": [
+      "Zhu",
+      "Liu",
+      "Zhang"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "gastrectomy",
+      "sleeve gastrectomy",
+      "obesity surgery"
+     ],
+     "keyword": 2.8,
+     "score": 49.5,
+     "tier": 3,
+     "c_rivista": 0.333,
+     "c_keyword": 0.56,
+     "c_recency": 0.63,
+     "ore_eta": 24.0,
+     "penalita_abstract": false,
+     "rank": 5
+    }
+   ],
+   "riserve": []
+  },
+  "proctologia": {
+   "area": "proctologia",
+   "areaLabel": "Proctologia",
+   "scalino_giorni": 21,
+   "scalino_iniziale": 7,
+   "finestra": "EDAT 2026/09/23 → 2026/10/13 (21 giorni, allargata da 7 giorni)",
+   "espressione_sintesi": "nelle ultime tre settimane",
+   "tetto_raggiunto": false,
+   "valutati": 5,
+   "selezionati": 5,
+   "tentativi_scalini": [
+    {
+     "scalino": 7,
+     "in_finestra": 0,
+     "scarti_obbligatori": 0,
+     "gia_usciti": 0,
+     "selezionabili": 0
+    },
+    {
+     "scalino": 10,
+     "in_finestra": 0,
+     "scarti_obbligatori": 0,
+     "gia_usciti": 0,
+     "selezionabili": 0
+    },
+    {
+     "scalino": 14,
+     "in_finestra": 1,
+     "scarti_obbligatori": 0,
+     "gia_usciti": 0,
+     "selezionabili": 1
+    },
+    {
+     "scalino": 21,
+     "in_finestra": 6,
+     "scarti_obbligatori": 1,
+     "gia_usciti": 0,
+     "selezionabili": 5
+    }
+   ],
+   "pmid_oltre_14_giorni": [
+    "42803164",
+    "42775535",
+    "42775545",
+    "42791481"
+   ],
+   "articoli": [
+    {
+     "pmid": "42816945",
+     "doi": "10.1111/codi.70641",
+     "titolo_en": "LigaSure versus conventional excisional haemorrhoidectomy: A systematic review and meta-analysis with trial sequential analysis of randomised controlled trials.",
+     "abstract": "BACKGROUND: Conventional excisional haemorrhoidectomy remains the gold standard treatment for grade IV haemorrhoids, although energy-based devices may reduce postoperative pain. We performed a systematic review and meta-analysis of randomised controlled trials comparing LigaSure with conventional haemorrhoidectomy.\nMETHODS: A systematic search of PubMed, Scopus, Web of Science and the Cochrane Central Register was performed up to July 2025. Randomised controlled trials comparing LigaSure with conventional techniques were included. Pooled risk ratios (RRs) and mean differences (MDs) with 95% confidence intervals (CIs) were calculated using random-effects models. Heterogeneity was assessed with the I2 statistic, and trial sequential analysis (TSA) was applied to assess conclusiveness.\nRESULTS: Forty-three unique RCTs comprising 3,277 participants were analysed. LigaSure was associated with lower postoperative pain scores on days 1 and 2 and during the first and second postoperative weeks, reduced analgesic requirements and intraoperative blood loss, shorter operating time and time to return to daily activities, and lower risks of postoperative wound discharge, postoperative bleeding and acute urinary retention. No statistically significant differences were observed in immediate postoperative pain, pain on postoperative day 3 or week 4, recurrence, length of hospital stay, constipation, pruritus, surgical site infection, incomplete healing, anal fissure, anal stenosis, or faecal incontinence.\nCONCLUSION: LigaSure was associated with improvements in selected early perioperative outcomes, particularly postoperative pain and return to daily activities. However, uncertainty remains for several outcomes, and evidence regarding recurrence and other long-term anorectal outcomes remains limited.",
+     "rivista": "Colorectal disease : the official journal of the Association of Coloproctology of Great Britain and Ireland",
+     "rivista_sigla": "Colorectal Dis",
+     "tipi": [
+      "Journal Article",
+      "Systematic Review",
+      "Meta-Analysis",
+      "Comparative Study"
+     ],
+     "edat": "2026-10-01T00:33:00",
+     "autori": [
+      "Barone",
+      "Pompeu",
+      "Delgado"
+     ],
+     "segnali": [
+      "metanalisi",
+      "revisione_sistematica"
+     ],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "anal fissure",
+      "anorectal"
+     ],
+     "keyword": 1.9,
+     "score": 43.3,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.38,
+     "c_recency": 0.291,
+     "ore_eta": 299.1,
+     "penalita_abstract": false,
+     "rank": 1
+    },
+    {
+     "pmid": "42803164",
+     "doi": "10.1111/codi.70636",
+     "titolo_en": "Long-term clinical outcomes of stem cell-based interventions in Crohn's-related perianal fistula: A systematic review and meta-analysis.",
+     "abstract": "BACKGROUND: Perianal fistulas are a debilitating complication of Crohn's disease, frequently refractory to conventional medical and surgical therapy. Stem cell-based interventions, particularly mesenchymal stem cells (MSCs), have emerged as a promising therapeutic alternative, yet long-term outcomes remain uncertain.\nMETHODS: Web of Science, PubMed, Embase, Scopus, and the Cochrane Library were searched through September 1, 2024. Studies evaluating stem cell or stem cell-derived products for Crohn's disease-associated perianal fistulas with ≥12 months' follow-up were included. Efficacy outcomes included clinical and radiological healing and recurrence; safety outcomes encompassed adverse events, infections, malignancies and mortality. Meta-analyses were conducted using random-effects models. The primary analysis was restricted to RCTs, while observational and early-phase studies were analysed separately. An exploratory pooled estimate across all study designs was also performed.\nRESULTS: Eighteen studies comprising 750 patients were included, with follow-up ranging from 12 months to 4 years. In the primary analysis of RCTs, the pooled long-term healing rate was 59% (95% CI, 51%-67%), with no observed heterogeneity (I2 = 0%). Observational and early-phase studies demonstrated broadly comparable healing rates but with greater heterogeneity and a higher risk of bias. An exploratory pooled analysis across all studies yielded an overall healing rate of 63% (95% CI 55%-70%), although this estimate should be interpreted with caution due to differences in study design. Safety profiles were favourable across studies. No treatment-related deaths and no definitively therapy-associated malignancies were identified.\nCONCLUSIONS: Stem cell-based therapy is a safe and effective long-term treatment option for Crohn's disease associated perianal fistulas, achieving durable closure in approximately two-thirds of patients.",
+     "rivista": "Colorectal disease : the official journal of the Association of Coloproctology of Great Britain and Ireland",
+     "rivista_sigla": "Colorectal Dis",
+     "tipi": [
+      "Journal Article",
+      "Meta-Analysis",
+      "Systematic Review"
+     ],
+     "edat": "2026-09-28T06:04:00",
+     "autori": [
+      "Heidari",
+      "Azizpour",
+      "Rayatpisheh"
+     ],
+     "segnali": [
+      "metanalisi",
+      "revisione_sistematica"
+     ],
+     "doi_plausibile": true,
+     "aree_secondarie": [
+      "colon-retto"
+     ],
+     "termini": [
+      "perianal fistula",
+      "perianal"
+     ],
+     "keyword": 1.9,
+     "score": 41.9,
+     "tier": 2,
+     "c_rivista": 0.583,
+     "c_keyword": 0.38,
+     "c_recency": 0.221,
+     "ore_eta": 365.6,
+     "penalita_abstract": false,
+     "rank": 2
+    },
+    {
+     "pmid": "42775535",
+     "doi": "10.1097/DCR.0000000000004429",
+     "titolo_en": "Measuring Symptom Severity and Health-Related Quality-of-Life with Hemorrhoid Treatments: Systematic Review.",
+     "abstract": "BACKGROUND: Hemorrhoids are common and relief anchors on symptom improvement. Despite several available treatment options, the optimal patient-reported outcome measure for contemporary clinical trials is not established.\nOBJECTIVE: We aimed to systematically assess patient-reported outcome measures that measure hemorrhoid symptom severity and/or health-related quality of life.\nDATA SOURCES: A systematic review was performed using PubMed and Embase (1980-2025).\nSTUDY SELECTION: Prospective development/validation studies evaluating patient-reported outcome measures relevant to hemorrhoidal disease.\nMAIN OUTCOME MEASURES: Patient-reported outcome measures were evaluated on key measurement properties of reliability, internal consistency, construct validity, and responsiveness according to COSMIN v2.0 criteria.\nRESULTS: Of the 1,266 total studies reviewed, nine patient-reported outcome measures were identified: seven measure symptom severity and six measure health-related quality-of-life. Three demonstrated reliability, internal consistency, construct validity, and responsiveness. The Patient Reported Outcome Measure-Haemorrhoidal Impact And Satisfaction Score comprehensively measures symptom severity, health-related quality-of-life, and treatment satisfaction. The Hemorrhoidal Disease Symptom Score classifies patients with high or low symptom load, and when used in combination with Short Health Scale-Hemorrhoidal Disease, also measures impact on health-related quality of life.\nLIMITATIONS: Preference toward specific measures may differ between clinical trials and clinical practice.\nCONCLUSIONS: We identify two viable patient-reported outcome measures for use in future clinical trials that evaluate hemorrhoid interventions.",
+     "rivista": "Diseases of the colon and rectum",
+     "rivista_sigla": "Dis Colon Rectum",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-09-23T07:54:00",
+     "autori": [
+      "Soto",
+      "Srinivasan",
+      "Perry"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "hemorrhoid"
+     ],
+     "keyword": 1.0,
+     "score": 40.9,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.2,
+     "c_recency": 0.136,
+     "ore_eta": 483.8,
+     "penalita_abstract": false,
+     "rank": 3
+    },
+    {
+     "pmid": "42775545",
+     "doi": "10.1097/DCR.0000000000004452",
+     "titolo_en": "The THOMAS Study: A Pilot Study for Patient-Administered Anal Cancer Screening.",
+     "abstract": "BACKGROUND: Screening for anal dysplasia and human papilloma virus allows for appropriate surveillance and treatment, but not all patients are willing or able to have this test performed in a physician's office. At-home testing may be a viable option to expand access to anal dysplasia screening, but its feasibility and reliability have not yet been tested.\nOBJECTIVE: This is a pilot study to determine if patient-sampled screening is feasible and accurate compared to physician-sampled anal dysplasia screening.\nDESIGN: Single-center prospective trial.\nSETTINGS: A single tertiary care center.\nPATIENTS: Fifty patients over 35 years old, who are HIV-positive, participated in anoreceptive intercourse, and without a previous diagnosis of anal cancer were recruited.\nINTERVENTION: Eligible participants were provided written instructions and self-collected a sample independently, followed by another anal swab performed by a physician. Both samples were submitted to pathology for human papilloma virus and anal dysplasia testing. Patients also completed a questionnaire on their perceptions of the self-collection and willingness to pursue this in the future.\nMAIN OUTCOME MEASURES: Accuracy, sensitivity, and specificity of pathology results.\nRESULTS: For detecting the presence of atypical cells, patient-collected samples had 72.0% accuracy, 85.7% sensitivity, 72.0% specificity, 72.0% positive predictive value, and 85.7% negative predictive value. Cytology classification had moderate agreement between patient and physician-collected samples (Cohen's κ = 0.51, p < 0.01). For detecting the presence of high-risk human papilloma virus, patient-collected samples had 83.7% accuracy, 87.5% sensitivity, 81.8% specificity, 70.0% positive predictive value, and 93.1% negative predictive value. Human papilloma virus subtype classification had moderate agreement between patient and physician-collected samples (Cohen's κ = 0.63, p < 0.01).\nLIMITATIONS: This is a single-institution pilot study with a small sample size, limiting generalizability.\nCONCLUSIONS: Preliminary results show promising results for patient administered anal dysplasia sampling, and most patients have confidence in the results. At-home screening could be a feasible method for increasing anal dysplasia screening. See Video Abstract.",
+     "rivista": "Diseases of the colon and rectum",
+     "rivista_sigla": "Dis Colon Rectum",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-09-23T07:55:00",
+     "autori": [
+      "Miyazaki",
+      "Matecki",
+      "Lee"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "anal cancer"
+     ],
+     "keyword": 1.0,
+     "score": 40.9,
+     "tier": 1,
+     "c_rivista": 0.833,
+     "c_keyword": 0.2,
+     "c_recency": 0.136,
+     "ore_eta": 483.7,
+     "penalita_abstract": false,
+     "rank": 4
+    },
+    {
+     "pmid": "42791481",
+     "doi": "10.1007/s13304-026-02866-6",
+     "titolo_en": "Polidocanol foam sclerotherapy for hemorrhoidal disease in a private outpatient setting: a real-world single-center study combining chart review and WhatsApp-delivered patient-reported outcomes.",
+     "abstract": "BACKGROUND: Polidocanol foam sclerotherapy (PFS) is an effective office-based treatment for symptomatic hemorrhoidal disease (HD), but real-world data from private practice and patient-reported outcomes (PROMs) at variable follow-up are scarce.\nMETHODS: We retrospectively reviewed all consecutive patients treated with PFS (3% polidocanol, Tessari method) in a single private proctology office (December 2021-May 2026). Indication was primarily symptom-driven rather than based on Goligher grade. Two data sources were combined: session-level chart review and a structured digital questionnaire (Google Forms) delivered through a personalized WhatsApp invitation, exploring symptoms before and after treatment, post-procedural discomfort and satisfaction. Outcomes were also explored by time since the last session.\nRESULTS: Eighty-four patients underwent 118 sessions (65.5% single). The survey response rate was 65.5% (55/84; median time from last treatment 64 days, range 1-1,438). Among patients symptomatic at baseline, improvement or resolution was reported by 95.8% (46/48) for bleeding, 97.4% (37/38) for heaviness/pain and 86.4% (38/44) for prolapse (composite 121/130, 93.1%). No or mild post-procedural discomfort was reported by 89.0%, overall satisfaction was 94.5%, and no severe discomfort was reported; no major adverse event was reported or documented. Chart review captured in-office follow-up after 38.1% of sessions, with persistence/recurrence in 63.4% of classifiable encounters. Chart and PROM estimates used different units and are not directly comparable; their discrepancy suggests return-to-clinic ascertainment bias.\nCONCLUSIONS: Among respondents, PFS achieved high patient-reported symptom control and satisfaction. A WhatsApp-delivered PROM survey was feasible and may reduce the bias of clinic-return-based follow-up.",
+     "rivista": "Updates in surgery",
+     "rivista_sigla": "Updates Surg",
+     "tipi": [
+      "Journal Article"
+     ],
+     "edat": "2026-09-25T23:43:00",
+     "autori": [
+      "Neola",
+      "Frezza"
+     ],
+     "segnali": [],
+     "doi_plausibile": true,
+     "aree_secondarie": [],
+     "termini": [
+      "hemorrhoid"
+     ],
+     "keyword": 1.0,
+     "score": 24.2,
+     "tier": 3,
+     "c_rivista": 0.333,
+     "c_keyword": 0.2,
+     "c_recency": 0.177,
+     "ore_eta": 419.9,
+     "penalita_abstract": false,
+     "rank": 5
+    }
+   ],
+   "riserve": []
+  }
+ }
+}

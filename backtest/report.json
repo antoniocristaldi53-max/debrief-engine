@@ -1,0 +1,87 @@
+{
+ "2026-10-13 hpb": {
+  "finestra_codice": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+  "sel_codice": 7,
+  "sel_reale": 7,
+  "in_comune_top7": 6,
+  "reali_tra_le_riserve": 1,
+  "reali_mancanti": [],
+  "codice_non_pubblicati": [
+   [
+    "42864456",
+    53.4,
+    "Comparison of endoscopic and radiologic drainage for symptomatic posto"
+   ]
+  ]
+ },
+ "2026-10-13 colon-retto": {
+  "finestra_codice": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+  "sel_codice": 6,
+  "sel_reale": 7,
+  "in_comune_top7": 6,
+  "reali_tra_le_riserve": 0,
+  "reali_mancanti": [
+   "42861616"
+  ],
+  "codice_non_pubblicati": []
+ },
+ "2026-10-13 eso-gastrico": {
+  "finestra_codice": "EDAT 2026/10/11 → 2026/10/13 (72h)",
+  "sel_codice": 5,
+  "sel_reale": 5,
+  "in_comune_top7": 5,
+  "reali_tra_le_riserve": 0,
+  "reali_mancanti": [],
+  "codice_non_pubblicati": []
+ },
+ "2026-10-14 hpb": {
+  "finestra_codice": "EDAT 2026/10/12 → 2026/10/14 (72h)",
+  "sel_codice": 7,
+  "sel_reale": 7,
+  "in_comune_top7": 6,
+  "reali_tra_le_riserve": 1,
+  "reali_mancanti": [],
+  "codice_non_pubblicati": [
+   [
+    "42868946",
+    53.4,
+    "Value of tumor burden score combined with alpha-fetoprotein stratifica"
+   ]
+  ]
+ },
+ "2026-10-14 colon-retto": {
+  "finestra_codice": "EDAT 2026/10/12 → 2026/10/14 (72h)",
+  "sel_codice": 6,
+  "sel_reale": 5,
+  "in_comune_top7": 5,
+  "reali_tra_le_riserve": 0,
+  "reali_mancanti": [],
+  "codice_non_pubblicati": [
+   [
+    "42869257",
+    51.6,
+    "Myofibroblast-Derived Transglutaminase 2 Activity is Upregulated in St"
+   ]
+  ]
+ },
+ "2026-10-14 eso-gastrico": {
+  "finestra_codice": "EDAT 2026/10/12 → 2026/10/14 (72h)",
+  "sel_codice": 6,
+  "sel_reale": 4,
+  "in_comune_top7": 4,
+  "reali_tra_le_riserve": 0,
+  "reali_mancanti": [],
+  "codice_non_pubblicati": [
+   [
+    "42870551",
+    56.1,
+    "Lessons learned: organ-preserving management of verrucous carcinoma of"
+   ],
+   [
+    "42869970",
+    54.0,
+    "Long-term objective hiatal hernia recurrence after magnetic sphincter "
+   ]
+  ]
+ }
+}
