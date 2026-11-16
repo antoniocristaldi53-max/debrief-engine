@@ -7,14 +7,14 @@ Non creare file di output fuori dalla scratchpad, non creare altri artefatti, no
 
 === PASSO 1 — DATA E PMID GIÀ PUBBLICATI ===
 Data dell'edizione = data di esecuzione = oggi, fuso Europe/Rome (`TZ=Europe/Rome date +%F`). Nessun giorno aggiunto.
-Costruisci l'insieme dei PMID già pubblicati: ArtifactData action "query", collection "edizioni", query {"where":[["data","gte","<oggi meno 29 giorni>"]],"limit":200}, con out_dir su una cartella della scratchpad. Se c'è un next_cursor o il risultato arriva esattamente al limite, pagina finché non hai letto tutto (sono circa 5 documenti per giorno). Estrai con jq tutti gli articoli[].pmid in un file `seen.txt`, un PMID per riga. Se la query fallisce, prosegui con `seen.txt` vuoto e dichiaralo in "nota" di ogni area.
+Scarica le edizioni già pubblicate: ArtifactData action "query", collection "edizioni", query {"where":[["data","gte","<oggi meno 29 giorni>"]],"limit":300}, con out_dir su una cartella vuota della scratchpad (`<seen_dir>`). Se c'è un next_cursor o il risultato arriva esattamente al limite, pagina nella stessa cartella finché non hai letto tutto (sono circa 5 documenti per giorno). Non estrarre i PMID a mano: il motore li legge da `<seen_dir>` con `--seen-dir` e stampa quanti ne ha trovati (circa 450-500: se ne stampa meno di 100 con la query riuscita, fermati e controlla la cartella). Se la query fallisce, lancia il motore senza `--seen-dir` e dichiaralo in "nota" di ogni area.
 
 === PASSO 2 — MOTORE ===
 ```
 cd "$(mktemp -d)" && git clone --depth 1 https://github.com/antoniocristaldi53-max/debrief-engine && cd debrief-engine
 pip install -q -r requirements.txt --break-system-packages
 python -m pytest -q
-python -m debrief.pipeline --seen <percorso>/seen.txt --out candidati.json --verifica-sigle
+python -m debrief.pipeline --seen-dir <seen_dir> --out candidati.json --verifica-sigle
 ```
 - Se il clone fallisce, riprova fino a 3 volte a 60 secondi di distanza. Se fallisce ancora, **non improvvisare la procedura a mano**: non pubblicare l'edizione e manda una PushNotification che lo dice.
 - Se i test falliscono, non usare il motore: stessa regola, niente edizione e notifica.
@@ -29,6 +29,7 @@ Le areaKey sono: hpb, parete, colon-retto, eso-gastrico, proctologia.
 3. **Selezionati** = articoli che pubblichi (al massimo 7). Se escludi qualcosa e restano riserve, usale. Non inventare contenuti per arrivare a 3: se il motore dà meno di 3 articoli al tetto della categoria, pubblica l'area così e spiega in "nota" con i numeri di `tentativi_scalini` (esaurimento del pool o scarsità di indicizzazione).
 4. **Articoli oltre i 14 giorni** (`pmid_oltre_14_giorni`): nel campo "tipo" aggiungi in coda la data EDAT fra parentesi, es. "Coorte retrospettiva (indicizzato il 02/10/2026)", e in "nota" scrivi che lo scalino supera i 14 giorni.
 5. **DOI**: se `doi_plausibile` è false, segnalalo in "nota".
+6. **Riviste tier 3 aggiunte il 16/11/2026** (BMC Surg, Am Surg, ANZ J Surg, Ann R Coll Surg Engl, Can J Surg, J Robot Surg, J Laparoendosc Adv Surg Tech A, Ann Coloproctol, Ann Gastroenterol Surg, J Abdom Wall Surg): servono a non lasciare vuote le aree a basso volume. Pubblicale con lo stesso metro delle altre; se un lavoro di queste riviste è debole (serie piccola, descrittivo, nessun esito chirurgico) e non ci sono alternative, pubblicalo dicendolo in "rilevanza" oppure escludilo dichiarandolo in "nota", non promuoverlo per riempire.
 
 === PASSO 4 — ARRICCHIMENTO (connettori) ===
 **TRIAL IN CORSO.** Per ogni area con almeno 3 articoli selezionati, usa il connettore Clinical_Trials (`mcp__Clinical_Trials__search_trials`, status ["RECRUITING"], page_size 3-4) per 2-4 trial che rispondono alla domanda che il lavoro selezionato lascia aperta, non perché contengono la stessa parola. Se il connettore non è caricabile, riprova con ToolSearch fino a 3 volte a 60 secondi; poi ripiega sull'API pubblica ClinicalTrials.gov v2 (`https://clinicaltrials.gov/api/v2/studies`, `filter.overallStatus=RECRUITING`) e dichiaralo in "nota". Nell'elenco connettori esistono due voci «Clinical Trials»: quella in needs_reconnect punta a un endpoint dismesso, ignorala e non segnalarla.
@@ -50,7 +51,7 @@ In "nota" riporta sempre, in una riga, che i candidati vengono dal motore debrie
 
 **VERIFICA PRIMA DI CHIUDERE**
 1. Rileggi i cinque documenti scritti e confrontali con quanto hai composto (lo score salvato come intero è una normalizzazione innocua).
-2. Nessun PMID pubblicato oggi è in seen.txt; nessun PMID in due aree.
+2. Nessun PMID pubblicato oggi compare negli articoli[].pmid dei documenti di `<seen_dir>` (estraili con `jq -r '.articoli[]?.pmid' <seen_dir>/edizioni/*.json`: il campo "data" dei documenti è la data dell'edizione, una stringa); nessun PMID in due aree.
 3. Ogni articolo ha DOI e PMID non vuoti.
 4. Per ogni area il numero di "articoli" coincide con "selezionati"; le aree sotto 3 hanno `tetto_raggiunto` true e lo dichiarano.
 
@@ -64,4 +65,4 @@ Italiano, tecnico, per uno specializzando di chirurgia generale. "takehome" cont
 Riassunto in chat di 4-6 righe: data, articoli per area, aree che hanno allargato e a quale scalino, il lavoro più importante e perché, candidati scartati dalla deduplica, problemi tecnici, eventuali proposte di modifica alle regole del motore.
 
 === NOTIFICA ===
-PushNotification solo se: un lavoro cambia la pratica; l'edizione è compromessa (motore non scaricabile o test falliti, fallback E-utilities fallito); segnale di esaurimento del pool (area ad alto volume a 14 giorni, area a basso volume a 21 o 28 giorni, o più aree vuote al tetto) con molti scarti da deduplica. Non sono notizie: limiti di piano dei connettori opzionali, la voce morta di Clinical Trials, ritardi di caricamento dei connettori superati con i tentativi. Metti il testo della notifica dentro tag <routine_summary>.
+PushNotification solo se: un lavoro cambia la pratica; l'edizione è compromessa (motore non scaricabile o test falliti, fallback E-utilities fallito, `seen` sotto 100 PMID); esaurimento del pool fuori dall'ordinario, cioè almeno 3 aree sotto 3 articoli al tetto, oppure un'area ad alto volume (hpb, colon-retto, eso-gastrico) vuota al tetto. Proctologia (e talvolta parete) sotto 3 articoli o vuota a 28 giorni è atteso: tutto MEDLINE produce meno di 2 lavori di proctologia al giorno; si dichiara in "nota", non si notifica. Non sono notizie: limiti di piano dei connettori opzionali, la voce morta di Clinical Trials, ritardi di caricamento dei connettori superati con i tentativi. Metti il testo della notifica dentro tag <routine_summary>.

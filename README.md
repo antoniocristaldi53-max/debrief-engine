@@ -7,7 +7,7 @@ Il codice fa la parte meccanica che prima stava dentro il prompt del task:
 
 | Passo | Modulo | Cosa fa |
 |---|---|---|
-| Recupero | `debrief/fetch.py` | E-utilities NCBI, query A + B su 14 giorni, supplementare 15-28 giorni solo se serve. DOI solo da `PubmedData/ArticleIdList` |
+| Recupero | `debrief/fetch.py` | E-utilities NCBI, query A + B + C su 14 giorni, supplementare 15-28 giorni solo se serve. DOI solo da `PubmedData/ArticleIdList` |
 | Scarti obbligatori | `debrief/rules.py` → `scarto()` | errata, lettere, commenti, visual abstract, editoriali senza abstract, abstract vuoto |
 | Aree e confini | `rules.classifica()` | una sola area per PMID; confine HPB/colon-retto, proctologia ≥ 1,8, ovaio fuori dal colon-retto |
 | Deduplica | `pipeline.run()` | scarta i PMID già pubblicati **prima** del ranking |
@@ -21,12 +21,14 @@ titoli in italiano, take-home, rilevanza, riordino editoriale motivato, trial, c
 
 ```bash
 pip install -r requirements.txt --break-system-packages
-python -m debrief.pipeline --seen pmid_gia_usciti.txt --out candidati.json
+python -m debrief.pipeline --seen-dir <cartella out_dir di ArtifactData> --out candidati.json
+python -m debrief.pipeline --seen pmid_gia_usciti.txt --out candidati.json   # in alternativa
 python -m debrief.pipeline --date 2026-10-14 --now 2026-10-14T09:45 --seen ... --out ...   # backtest
 python -m pytest -q
 ```
 
-`--seen`: un PMID per riga (le edizioni degli ultimi 29 giorni, lette dal database dell'artefatto).
+`--seen-dir`: la cartella in cui ArtifactData salva i documenti delle edizioni degli ultimi 29 giorni;
+il motore legge tutti gli `articoli[].pmid`. `--seen`: in alternativa, un PMID per riga.
 
 ## Cambiare una regola
 
@@ -40,3 +42,24 @@ Ogni errore già visto in produzione ha un test in `tests/test_rules.py`.
 aree a 72h (hpb, colon-retto, eso-gastrico): **32 dei 35 articoli pubblicati** stanno nella top-7 del codice,
 2 fra le riserve, 1 escluso correttamente (senza abstract, regola introdotta dopo).
 Differenza mediana di score rispetto al task: 1,2 punti.
+
+## Allargamento del recupero (16/11/2026)
+
+Dal 09/11 parete e proctologia uscivano vuote anche a 28 giorni e colon-retto, eso-gastrico e HPB
+arrivavano al tetto dei 14 giorni con 0-2 articoli: con un'edizione al giorno, il pool delle 35 riviste
+veniva consumato più in fretta di quanto si riempisse (circa 3,5-4 lavori nuovi al giorno per le aree
+ad alto volume, 1,4 per la parete, 0,7 per la proctologia).
+
+- Query **C** con 12 riviste chirurgiche (sigla MedlineTA e prefisso DOI verificati): J Hepatobiliary
+  Pancreat Sci e Surg Obes Relat Dis tier 2, le altre tier 3. Aggiunte anche alle supplementari
+  di parete e proctologia.
+- `Ann Surg Treat Res` da tier 1 a tier 3 (errore di tier).
+- `thymic`, `thymoma`, `intrathoracic` fra le esclusioni del colon-retto (HITHOC agganciava
+  `cytoreductive`).
+- `--seen-dir`: il motore legge i PMID già usciti direttamente dai JSON delle edizioni.
+
+Prova sullo stato del 16/11 sera (stesse edizioni già uscite): parete da 0 a 3 articoli a 7 giorni,
+proctologia da 0 a 2 a 28 giorni, HPB da 2 a 14 giorni a 3 a 72 ore; colon-retto ed eso-gastrico
+invariati o +1. La proctologia resta strutturalmente scarsa (in tutto MEDLINE meno di 2 lavori al giorno):
+edizioni corte o vuote in quell'area sono attese. `Int J Surg` non ha nuovi record in PubMed dal
+29/09/2026: è un ritardo di deposito dell'editore, non della sigla.

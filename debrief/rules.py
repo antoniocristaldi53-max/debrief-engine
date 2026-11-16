@@ -20,6 +20,12 @@ DOI_PREFISSI = {
     "Obes Surg": ["10.1007"], "Tech Coloproctol": ["10.1007"], "J Surg Oncol": ["10.1002"],
     "Updates Surg": ["10.1007"], "Langenbecks Arch Surg": ["10.1007"], "BJS Open": ["10.1093"],
     "Int J Colorectal Dis": ["10.1007"], "Surg Innov": ["10.1177"],
+    # 16/11/2026, prefissi verificati su E-utilities
+    "J Hepatobiliary Pancreat Sci": ["10.1002"], "Surg Obes Relat Dis": ["10.1016"],
+    "J Abdom Wall Surg": ["10.3389"], "Ann Coloproctol": ["10.3393"],
+    "Ann Gastroenterol Surg": ["10.1002"], "BMC Surg": ["10.1186"], "Am Surg": ["10.1177"],
+    "ANZ J Surg": ["10.1111"], "Ann R Coll Surg Engl": ["10.1308"], "Can J Surg": ["10.1503"],
+    "J Robot Surg": ["10.1007"], "J Laparoendosc Adv Surg Tech A": ["10.1089", "10.1177"],
 }
 
 LINEA_GUIDA_TITOLO = re.compile(

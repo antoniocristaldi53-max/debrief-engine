@@ -1,5 +1,6 @@
 # Configurazione del motore del Debrief chirurgico.
-# Ogni regola qui viene dal prompt dello scheduled task (versione del 25/10/2026).
+# Ogni regola qui viene dal prompt dello scheduled task (versione del 25/10/2026),
+# salvo le modifiche datate nei commenti.
 # Cambiare un peso = cambiare una riga di questo file (e far girare i test).
 
 formula:
@@ -43,7 +44,6 @@ riviste:
   "Gut": 1
   "HPB (Oxford)": 1
   "Hernia": 1
-  "Ann Surg Treat Res": 1
   "Dis Colon Rectum": 1
   "Gastric Cancer": 1
   "Surg Endosc": 2
@@ -66,6 +66,23 @@ riviste:
   "BJS Open": 3
   "Int J Colorectal Dis": 3
   "Surg Innov": 3
+  # 16/11/2026: allargamento del recupero. Dal 09/11 parete e proctologia escono vuote a 28 giorni
+  # e colon-retto/eso-gastrico/HPB arrivano al tetto dei 14 giorni: il pool delle 35 riviste
+  # non regge un'edizione quotidiana. Riviste chirurgiche indicizzate, verificate su E-utilities
+  # (sigla MedlineTA e prefisso DOI). Tier 3 salvo le due di società di riferimento.
+  "J Hepatobiliary Pancreat Sci": 2   # JSHBPS, HPB
+  "Surg Obes Relat Dis": 2            # ASMBS, bariatrica
+  "Ann Surg Treat Res": 3             # era tier 1: rivista coreana di medio impatto, errore di tier
+  "J Abdom Wall Surg": 3              # European Hernia Society
+  "Ann Coloproctol": 3
+  "Ann Gastroenterol Surg": 3
+  "BMC Surg": 3
+  "Am Surg": 3
+  "ANZ J Surg": 3
+  "Ann R Coll Surg Engl": 3
+  "Can J Surg": 3
+  "J Robot Surg": 3
+  "J Laparoendosc Adv Surg Tech A": 3
 
 # Query di recupero (identiche al prompt, per confrontabilità col connettore)
 query:
@@ -77,13 +94,20 @@ query:
       "Gastroenterology", "Gut", "Pancreatology", "Dis Colon Rectum", "Colorectal Dis",
       "Int J Colorectal Dis", "Tech Coloproctol", "Gastric Cancer", "Dis Esophagus",
       "Obes Surg", "Surg Oncol", "J Surg Oncol"]
+  # 16/11/2026: terza query con le riviste aggiunte (vedi sopra)
+  C: ["J Hepatobiliary Pancreat Sci", "Surg Obes Relat Dis", "J Abdom Wall Surg", "Ann Coloproctol",
+      "Ann Gastroenterol Surg", "BMC Surg", "Am Surg", "ANZ J Surg", "Ann R Coll Surg Engl",
+      "Can J Surg", "J Robot Surg", "J Laparoendosc Adv Surg Tech A"]
   supplementare:
     parete: ["Hernia", "Surg Endosc", "BJS Open", "Ann Surg", "Br J Surg", "JAMA Surg",
              "Am J Surg", "J Am Coll Surg", "World J Surg", "Langenbecks Arch Surg",
-             "Updates Surg", "Int J Surg", "Surgery"]
+             "Updates Surg", "Int J Surg", "Surgery",
+             "J Abdom Wall Surg", "BMC Surg", "Am Surg", "ANZ J Surg", "Can J Surg",
+             "Ann R Coll Surg Engl", "J Robot Surg", "J Laparoendosc Adv Surg Tech A"]
     proctologia: ["Tech Coloproctol", "Int J Colorectal Dis", "Colorectal Dis", "Dis Colon Rectum",
                   "Ann Surg", "Br J Surg", "Surg Endosc", "BJS Open", "Updates Surg",
-                  "Langenbecks Arch Surg", "Am J Surg", "Surgery"]
+                  "Langenbecks Arch Surg", "Am J Surg", "Surgery",
+                  "Ann Coloproctol", "BMC Surg", "Am Surg", "ANZ J Surg"]
 
 aree:
   hpb:
@@ -126,7 +150,8 @@ aree:
       0.8: [Crohn, ileostomy, colostomy, appendiceal, appendix cancer, peritoneal metastases,
             HIPEC, cytoreductive, peritonectomy]
       0.7: [stoma, colonoscopy, adenoma detection]
-    esclusioni_pertinenza: [ovarian cancer, ovarian carcinoma]
+    # 16/11/2026: HITHOC (chemioipertermia intratoracica) agganciava 'cytoreductive'
+    esclusioni_pertinenza: [ovarian cancer, ovarian carcinoma, thymic, thymoma, intrathoracic]
   eso-gastrico:
     label: "Esofago-gastrico"
     scalini: [3, 7, 10, 14]

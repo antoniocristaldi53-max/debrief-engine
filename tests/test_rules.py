@@ -135,8 +135,46 @@ def test_etichette_finestra():
 
 
 def test_tutte_le_riviste_delle_query_hanno_un_tier():
-    for j in CFG["query"]["A"] + CFG["query"]["B"]:
+    js = [j for q in pipeline.query_base(CFG) for j in q]
+    js += [j for q in CFG["query"]["supplementare"].values() for j in q]
+    for j in js:
         assert j in CFG["riviste"], j
+
+
+def test_query_di_base_disgiunte_e_complete():
+    # verifica_sigle confronta somma per rivista e unione: le query devono essere disgiunte
+    js = [j for q in pipeline.query_base(CFG) for j in q]
+    assert len(js) == len(set(js))
+    assert {"A", "B", "C"} <= set(CFG["query"])
+    # ogni rivista con un tier è recuperata da almeno una query di base; Liver Int e Surg Innov
+    # sono in whitelist solo per il tier, come prima del 16/11/2026
+    assert set(CFG["riviste"]) - set(js) <= {"Liver Int", "Surg Innov"}
+
+
+def test_supplementari_dentro_il_recupero_di_base():
+    js = {j for q in pipeline.query_base(CFG) for j in q}
+    for area, lista in CFG["query"]["supplementare"].items():
+        assert set(lista) <= js, area
+
+
+def test_riviste_aggiunte_16_11_hanno_prefisso_doi():
+    for j in CFG["query"]["C"]:
+        assert j in rules.DOI_PREFISSI, j
+
+
+def test_ann_surg_treat_res_non_e_tier_1():
+    assert CFG["riviste"]["Ann Surg Treat Res"] == 3
+
+
+def test_seen_dir_legge_documenti_nudi_e_incapsulati(tmp_path):
+    import json
+    (tmp_path / "edizioni").mkdir()
+    (tmp_path / "edizioni" / "a.json").write_text(json.dumps(
+        {"data": "2026-11-08", "articoli": [{"pmid": "111"}, {"pmid": "222"}]}))
+    (tmp_path / "edizioni" / "b.json").write_text(json.dumps(
+        {"data": {"data": "2026-11-09", "articoli": [{"pmid": 333}]}}))
+    (tmp_path / "edizioni" / "c.json").write_text(json.dumps({"data": "2026-11-10", "articoli": []}))
+    assert pipeline.leggi_seen_dir(tmp_path) == {"111", "222", "333"}
 
 
 # --- DOI: errore del 05/10/2026 ------------------------------------------------------------
@@ -158,3 +196,10 @@ def test_doi_mai_dalle_citazioni():
     assert rules.doi_plausibile(r)
     r["doi"] = "10.1200/JCO.99"
     assert not rules.doi_plausibile(r)
+
+
+def test_chemioipertermia_intratoracica_fuori_dal_colon_retto():
+    # caso del 16/11/2026: CRS + HITHOC per tumori epiteliali timici finiva in colon-retto
+    _, cl = score(rec("Cytoreductive Surgery with or without Hyperthermic Intrathoracic "
+                      "Chemotherapy for Thymic Epithelial Tumors"), "colon-retto")
+    assert cl["area"] != "colon-retto"

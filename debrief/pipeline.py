@@ -62,9 +62,14 @@ def recupera(journals_sets: list[list[str]], d_from: dt.date, d_to: dt.date,
     return recs
 
 
+def query_base(cfg: dict) -> list[list[str]]:
+    """Le query di riviste del recupero di base: tutte tranne le supplementari (A, B, C...)."""
+    return [v for k, v in cfg["query"].items() if k != "supplementare"]
+
+
 def verifica_sigle(cfg: dict, d_from: dt.date, d_to: dt.date, unione: int) -> dict:
     """La somma dei conteggi per rivista deve coincidere con l'unione (riviste disgiunte)."""
-    js = cfg["query"]["A"] + cfg["query"]["B"]
+    js = [j for q in query_base(cfg) for j in q]
     per = {j: fetch.count(f'"{j}"[Journal]', d_from, d_to) for j in js}
     zero = [j for j, c in per.items() if c == 0]
     non_risolte = [j for j in zero if fetch.count(f'"{j}"[Journal]') < 100]
@@ -91,7 +96,7 @@ def run(date: dt.date, now: dt.datetime, seen: set[str], cfg: dict,
     now_naive = now.astimezone(ROMA).replace(tzinfo=None)
     log: dict = {}
     base_from = date - dt.timedelta(days=13)
-    recs = prepara(recupera([cfg["query"]["A"], cfg["query"]["B"]], base_from, date, log, "base"),
+    recs = prepara(recupera(query_base(cfg), base_from, date, log, "base"),
                    cfg, now_naive)
     if verifica:
         log["verifica_sigle"] = verifica_sigle(cfg, base_from, date, log["base_unione"])
@@ -161,11 +166,27 @@ def run(date: dt.date, now: dt.datetime, seen: set[str], cfg: dict,
     }
 
 
+def leggi_seen_dir(d: pathlib.Path) -> set[str]:
+    """PMID da una cartella di documenti di edizione. Accetta il documento nudo
+    ({"data": "AAAA-MM-GG", "articoli": [...]}) o incapsulato ({"data": {...}})."""
+    out: set[str] = set()
+    for f in d.rglob("*.json"):
+        doc = json.loads(f.read_text())
+        if isinstance(doc.get("data"), dict):
+            doc = doc["data"]
+        for a in doc.get("articoli") or []:
+            if a.get("pmid"):
+                out.add(str(a["pmid"]).strip())
+    return out
+
+
 def main(argv=None) -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--date", help="data edizione AAAA-MM-GG (default: oggi a Roma)")
     ap.add_argument("--now", help="ISO, ora di Roma (default: adesso)")
     ap.add_argument("--seen", help="file con i PMID già pubblicati, uno per riga")
+    ap.add_argument("--seen-dir", help="cartella con i documenti JSON delle edizioni (out_dir di "
+                    "ArtifactData): si leggono tutti gli articoli[].pmid")
     ap.add_argument("--out", default="candidati.json")
     ap.add_argument("--verifica-sigle", action="store_true")
     a = ap.parse_args(argv)
@@ -175,6 +196,9 @@ def main(argv=None) -> int:
     seen = set()
     if a.seen:
         seen = {l.strip() for l in open(a.seen) if l.strip()}
+    if a.seen_dir:
+        seen |= leggi_seen_dir(pathlib.Path(a.seen_dir))
+        print(f"seen: {len(seen)} PMID", file=sys.stderr)
     res = run(date, now, seen, load_cfg(), a.verifica_sigle)
     pathlib.Path(a.out).write_text(json.dumps(res, ensure_ascii=False, indent=1))
     for k, v in res["aree"].items():
