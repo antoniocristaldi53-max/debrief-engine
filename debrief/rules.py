@@ -96,9 +96,19 @@ def classifica(rec: dict, cfg: dict) -> dict:
             anchor_regex(a).search(text) for a in ancore):
         punteggi["hpb"] = 0.0
     # Pertinenza colon-retto: oncologia ginecologica fuori
-    escl = cfg["aree"]["colon-retto"].get("esclusioni_pertinenza", [])
+    cr = cfg["aree"]["colon-retto"]
+    escl = cr.get("esclusioni_pertinenza", [])
     if any(anchor_regex(e).search(text) for e in escl) and punteggi["colon-retto"] > 0:
         punteggi["colon-retto"] = 0.0
+    # Termini peritoneali senza ancora colorettale: carcinosi di altra origine (gastrica...)
+    perit = set(cr.get("termini_peritoneali", []))
+    if perit & set(hits["colon-retto"]) and not any(
+            anchor_regex(a).search(text) for a in cr.get("ancore_colorettali", [])):
+        pesi = {t: p for p, lista in cr["termini"].items() for t in lista}
+        tolti = [t for t in hits["colon-retto"] if t in perit]
+        punteggi["colon-retto"] = round(max(0.0, punteggi["colon-retto"]
+                                            - sum(pesi[t] for t in tolti)), 3)
+        hits["colon-retto"] = [t for t in hits["colon-retto"] if t not in perit]
     soglia = cfg["aree"]["proctologia"]["soglia_prevalenza"]
     if punteggi["proctologia"] >= soglia:
         area = "proctologia"
@@ -117,9 +127,19 @@ def segnali(rec: dict, cfg: dict) -> list[str]:
         out.append("linea_guida_da_titolo")
     if re.search(r"\bvideo\b", rec["titolo_en"], re.I) and "video" not in out:
         out.append("video")
-    if re.search(r"\bcase report\b|\ba case\b", rec["titolo_en"], re.I) and "case_report" not in out:
+    s = cfg["scarti"]
+    if "case_report" not in out and (
+            re.search(r"\bcase report\b|\ba case\b(?![- ](control|series|mix))", rec["titolo_en"], re.I)
+            or re.search(s["case_report_abstract"], rec["abstract"][:300], re.I)):
         out.append("case_report")
-    return out
+    # 18/11/2026: revisione narrativa = PublicationType Review senza segni di revisione sistematica
+    # (molte meta-analisi sono indicizzate solo come Review: si guarda anche il testo)
+    if "Review" in rec["tipi"] and not {"metanalisi", "revisione_sistematica"} & set(out) \
+            and not re.search(s["revisione_sistematica_testo"],
+                              f'{rec["titolo_en"]} {rec["abstract"]}', re.I) \
+            and not re.search(s["abstract_strutturato"], rec["abstract"]):
+        out.append("revisione_narrativa")
+    return sorted(out)
 
 
 def doi_plausibile(rec: dict) -> bool:
@@ -148,7 +168,10 @@ def punteggio(rec: dict, kw: float, giorni_scalino: int, now: dt.datetime, cfg: 
     breve = len(rec["abstract"].strip()) < f["abstract_breve_caratteri"]
     if breve:
         s *= f["penalita_abstract_breve"]
+    # 18/11/2026: penalità per tipo di testo (la più severa se più segnali)
+    pen_tipo = min([f.get("penalita_segnali", {}).get(x, 1.0) for x in sg] or [1.0])
+    s *= pen_tipo
     return {"score": round(s, 1), "tier": tier, "c_rivista": round(c_riv, 3),
             "c_keyword": round(c_kw, 3), "c_recency": round(c_rec, 3),
             "ore_eta": round(ore, 1) if ore is not None else None,
-            "penalita_abstract": breve}
+            "penalita_abstract": breve, "penalita_tipo": pen_tipo}

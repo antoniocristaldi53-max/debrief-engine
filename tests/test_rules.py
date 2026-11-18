@@ -203,3 +203,71 @@ def test_chemioipertermia_intratoracica_fuori_dal_colon_retto():
     _, cl = score(rec("Cytoreductive Surgery with or without Hyperthermic Intrathoracic "
                       "Chemotherapy for Thymic Epithelial Tumors"), "colon-retto")
     assert cl["area"] != "colon-retto"
+
+
+# --- 18/11/2026: penalità per tipo di testo e termini peritoneali ----------------------------
+CHILO = ("A 55 year old woman presented with a recurrent mid-rectal sessile polyp with at least "
+         "high-grade dysplasia, having previously undergone transanal minimally invasive surgery. "
+         "She proceeded to elective laparoscopic ultralow anterior resection with covering loop "
+         "ileostomy. On postoperative day 3, drain output became milky.")
+
+
+def test_case_report_riconosciuto_dall_abstract_e_penalizzato():
+    # PMID 43042530: nessun PublicationType «Case Reports», nessun «case report» nel titolo
+    r = rec("Chyle Leak Following Laparoscopic Ultralow Anterior Resection for Recurrent Rectal "
+            "Polyp.", abstract=CHILO, rivista="Dis Colon Rectum")
+    assert "case_report" in r["segnali"]
+    p = rules.punteggio(r, 2.0, 3, NOW, CFG)
+    r["segnali"] = []
+    assert p["score"] == pytest.approx(rules.punteggio(r, 2.0, 3, NOW, CFG)["score"] * 0.75, abs=0.1)
+
+
+def test_studio_clinico_non_e_case_report():
+    r = rec("Robotic TEP and testicular morbidity",
+            abstract="BACKGROUND: We compared 484 patients. A 30-day outcome was assessed. " * 3)
+    assert "case_report" not in r["segnali"]
+
+
+def test_revisione_narrativa_penalizzata_ma_non_la_meta_analisi_indicizzata_come_review():
+    # PMID 43044915 (Gastroenterology, solo «Review») vs PMID 43039755 (NMA indicizzata «Review»)
+    narr = rec("Serrated neoplasia of the colorectum: updates on pathology and clinical management.",
+               abstract="Serrated neoplasia represents an increasingly recognized pathway. " * 5,
+               rivista="Gastroenterology", tipi=("Journal Article", "Review"))
+    nma = rec("Linear, circular and hand-sewn gastrojejunostomy: a systematic review and network "
+              "meta-analysis", rivista="Surg Obes Relat Dis", tipi=("Journal Article", "Review"))
+    assert "revisione_narrativa" in narr["segnali"]
+    assert "revisione_narrativa" not in nma["segnali"]
+    assert rules.punteggio(narr, 2.0, 3, NOW, CFG)["penalita_tipo"] == 0.85
+    assert rules.punteggio(nma, 2.0, 3, NOW, CFG)["penalita_tipo"] == 1.0
+
+
+def test_carcinosi_gastrica_non_finisce_in_colon_retto():
+    # PMID 43044526, «PERISCOPE II: lessons learned»: 2,4 punti peritoneali contro 2,0 gastrici
+    _, cl = score(rec("The PERISCOPE II study in patients with gastric cancer and limited "
+                      "peritoneal metastases: lessons learned.",
+                      abstract="Cytoreductive surgery with HIPEC for gastric cancer with limited "
+                               "peritoneal metastases versus systemic therapy; gastrectomy. " * 2,
+                      rivista="Eur J Surg Oncol"), "eso-gastrico")
+    assert cl["punteggi_aree"]["colon-retto"] == 0
+    assert cl["area"] == "eso-gastrico"
+
+
+def test_carcinosi_colorettale_resta_in_colon_retto():
+    _, cl = score(rec("Cytoreductive surgery and HIPEC for colorectal peritoneal metastases"),
+                  "colon-retto")
+    assert cl["area"] == "colon-retto"
+    assert {"HIPEC", "cytoreductive", "peritoneal metastases"} <= set(cl["termini"])
+
+
+def test_case_control_non_e_case_report():
+    # PMID 43035620: «A Case-Control Analysis» agganciava '\ba case\b' del titolo
+    assert "case_report" not in rec("Post-bariatric hypoglycaemia: A Case-Control Analysis")["segnali"]
+    assert "case_report" in rec("Jejunal perforation after pancreatoduodenectomy: a case report")["segnali"]
+
+
+def test_studio_originale_indicizzato_come_review_non_e_narrativo():
+    # PMID 43013967: coorte di 253 pazienti con abstract strutturato, PublicationType «Review»
+    r = rec("Time-dependent prognostic value of preoperative CA19-9 after resection",
+            abstract="BACKGROUND: x.\nMETHODS: retrospective cohort of 253 patients.\nRESULTS: y.",
+            tipi=("Journal Article", "Review"))
+    assert "revisione_narrativa" not in r["segnali"]

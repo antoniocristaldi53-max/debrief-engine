@@ -12,6 +12,12 @@ formula:
   recency_data_mancante: 0.3
   penalita_abstract_breve: 0.70
   abstract_breve_caratteri: 40
+  # 18/11/2026: penalità per tipo di testo. Lo score premiava case report (chilo-peritoneo dopo
+  # resezione anteriore, 57,0, rank 4) e revisioni narrative (lesioni serrate, 60,7, rank 2)
+  # sopra studi clinici comparativi. Si applicano ai segnali omonimi (vedi rules.segnali).
+  penalita_segnali:
+    case_report: 0.75
+    revisione_narrativa: 0.85
   top_n: 7
   candidati_extra: 5        # oltre la top-7, per permettere riordino editoriale
   minimo_area: 3
@@ -152,6 +158,12 @@ aree:
       0.7: [stoma, colonoscopy, adenoma detection]
     # 16/11/2026: HITHOC (chemioipertermia intratoracica) agganciava 'cytoreductive'
     esclusioni_pertinenza: [ovarian cancer, ovarian carcinoma, thymic, thymoma, intrathoracic]
+    # 18/11/2026: i termini peritoneali contano per il colon-retto solo con un'ancora colorettale
+    # o appendicolare. «PERISCOPE II: lessons learned» (cancro gastrico, CRS/HIPEC) finiva in
+    # colon-retto con 2,4 punti peritoneali contro 2,0 gastrici.
+    termini_peritoneali: [peritoneal metastases, HIPEC, cytoreductive, peritonectomy]
+    ancore_colorettali: [colorectal, colon, rectal, rectum, sigmoid, cecal, caecal, appendi,
+                         pseudomyxoma, mesorectal, proctectomy, colectomy, hemicolectomy]
   eso-gastrico:
     label: "Esofago-gastrico"
     scalini: [3, 7, 10, 14]
@@ -206,6 +218,11 @@ scarti:
     - "reviewers"
     - "in memoriam"
     - "obituary"
+  # 18/11/2026: riconoscimento dal testo, oltre che dal PublicationType (spesso assente)
+  case_report_abstract: "^\\s*(we (present|report|describe) (a|an|the) (rare )?case|(a|an)\\s+\\d{1,3}[- ]?(year|yr)s?[- ]old|case (presentation|summary)\\s*:)"
+  revisione_sistematica_testo: "systematic review|meta-analy|metaanaly|network meta|PRISMA|pooled analysis"
+  # abstract con sezioni METHODS/RESULTS: studio originale anche se PubMed lo indicizza come Review
+  abstract_strutturato: "(^|\\n)\\s*(METHODS?|MATERIALS? AND METHODS|RESULTS|FINDINGS)\\s*:"
   segnali_editoriali:    # non scartano: marcano per il riordino del modello
     "Case Reports": case_report
     "Video-Audio Media": video

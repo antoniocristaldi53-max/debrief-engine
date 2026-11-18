@@ -63,3 +63,27 @@ proctologia da 0 a 2 a 28 giorni, HPB da 2 a 14 giorni a 3 a 72 ore; colon-retto
 invariati o +1. La proctologia resta strutturalmente scarsa (in tutto MEDLINE meno di 2 lavori al giorno):
 edizioni corte o vuote in quell'area sono attese. `Int J Surg` non ha nuovi record in PubMed dal
 29/09/2026: è un ritardo di deposito dell'editore, non della sigla.
+
+## Penalità per tipo di testo e carcinosi non colorettale (18/11/2026)
+
+Nell'edizione del 18/11 lo score metteva in top-7 un case report (chilo-peritoneo dopo resezione
+anteriore ultrabassa, 57,0) e una revisione narrativa (lesioni serrate, 60,7) sopra studi clinici
+comparativi, e assegnava al colon-retto «PERISCOPE II: lessons learned» (cancro gastrico) per i soli
+termini peritoneali.
+
+- `formula.penalita_segnali`: score × 0,75 per `case_report`, × 0,85 per `revisione_narrativa`
+  (si applica la più severa). Il campo `penalita_tipo` di ogni candidato riporta il fattore usato.
+- `case_report` riconosciuto anche dall'inizio dell'abstract («A 55 year old woman…», «We present a
+  case…»); «a case-control/series» non è più un case report.
+- `revisione_narrativa`: PublicationType Review senza segni di revisione sistematica/meta-analisi
+  nel testo e senza abstract strutturato (METHODS/RESULTS). Molte meta-analisi e alcune coorti sono
+  indicizzate solo come Review: restano senza penalità.
+- `aree.colon-retto.termini_peritoneali`: HIPEC, cytoreductive, peritoneal metastases e peritonectomy
+  contano per il colon-retto solo con un'ancora colorettale o appendicolare (`ancore_colorettali`).
+
+Prova sul recupero del 18/11 (729 record): PERISCOPE II passa a eso-gastrico; escono dal colon-retto
+anche una serie PIPAC sul mesotelioma e un consenso PSOGI generico senza riferimenti colorettali
+(restano senza area). In top-7 colon-retto il case report e la revisione narrativa escono e
+entrano LASRE e la stadiazione Medicare, le stesse scelte fatte a mano nell'edizione. Fra i record in
+area, 6 marcati case report e 10 revisioni narrative; un'analisi bibliometrica resta marcata
+narrativa (falso positivo accettato).
