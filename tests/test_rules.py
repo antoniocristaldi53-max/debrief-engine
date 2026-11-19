@@ -271,3 +271,32 @@ def test_studio_originale_indicizzato_come_review_non_e_narrativo():
             abstract="BACKGROUND: x.\nMETHODS: retrospective cohort of 253 patients.\nRESULTS: y.",
             tipi=("Journal Article", "Review"))
     assert "revisione_narrativa" not in r["segnali"]
+
+
+# --- 19/11/2026: confine eso-gastrico per i termini deboli ---------------------------------
+def test_tumore_della_colecisti_con_invasione_duodenale_va_in_hpb():
+    # PMID 43049805: 0,7 punti eso-gastrici da 'direct duodenal invasion' contro 0,5 HPB
+    _, cl = score(rec("Stage-tailored role of extrahepatic bile duct resection in gallbladder "
+                      "cancer: limited value in T2 disease",
+                      abstract="EBDR was selectively performed based on lymph node metastasis, "
+                               "positive cystic duct margins, or direct duodenal invasion. " * 2,
+                      rivista="Langenbecks Arch Surg"), "hpb")
+    assert cl["punteggi_aree"]["eso-gastrico"] == 0
+    assert cl["area"] == "hpb"
+
+
+def test_varici_da_ipertensione_portale_non_sono_eso_gastrico():
+    _, cl = score(rec("TIPS versus endoscopic therapy for variceal bleeding in cirrhosis",
+                      abstract="Patients with cirrhosis and variceal bleeding after hepatectomy. " * 2),
+                  "hpb")
+    assert cl["punteggi_aree"]["eso-gastrico"] == 0
+
+
+def test_termini_deboli_restano_con_ancora_esogastrica():
+    _, cl = score(rec("Duodenal switch versus Roux-en-Y gastric bypass in severe obesity"),
+                  "eso-gastrico")
+    assert cl["area"] == "eso-gastrico"
+    assert "duodenal" in cl["termini"]
+    _, cl = score(rec("Gastroesophageal variceal bleeding: gastric varices after sleeve"),
+                  "eso-gastrico")
+    assert "variceal" in cl["termini"]

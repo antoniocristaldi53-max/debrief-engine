@@ -109,6 +109,17 @@ def classifica(rec: dict, cfg: dict) -> dict:
         punteggi["colon-retto"] = round(max(0.0, punteggi["colon-retto"]
                                             - sum(pesi[t] for t in tolti)), 3)
         hits["colon-retto"] = [t for t in hits["colon-retto"] if t not in perit]
+    # 19/11/2026: termini eso-gastrici deboli senza ancora esofago-gastrica (invasione duodenale
+    # di un tumore biliare, varici da ipertensione portale): non agganciano l'eso-gastrico
+    eg = cfg["aree"]["eso-gastrico"]
+    deboli = set(eg.get("termini_deboli", []))
+    if deboli & set(hits["eso-gastrico"]) and not any(
+            anchor_regex(a).search(text) for a in eg.get("ancore_esogastriche", [])):
+        pesi = {t: p for p, lista in eg["termini"].items() for t in lista}
+        tolti = [t for t in hits["eso-gastrico"] if t in deboli]
+        punteggi["eso-gastrico"] = round(max(0.0, punteggi["eso-gastrico"]
+                                             - sum(pesi[t] for t in tolti)), 3)
+        hits["eso-gastrico"] = [t for t in hits["eso-gastrico"] if t not in deboli]
     soglia = cfg["aree"]["proctologia"]["soglia_prevalenza"]
     if punteggi["proctologia"] >= soglia:
         area = "proctologia"

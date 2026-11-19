@@ -174,6 +174,15 @@ aree:
       0.9: [D2 lymphadenectomy, hiatal hernia, gastroesophageal reflux, esophagogastric]
       0.8: [Roux-en-Y, Barrett, GIST, POEM, obesity surgery, metabolic surgery, variceal]
       0.7: [tracheoesophageal, duodenal, LECS]
+    # 19/11/2026: 'duodenal' e 'variceal' contano per l'eso-gastrico solo con un'ancora
+    # esofago-gastrica o bariatrica. «Stage-tailored role of extrahepatic bile duct resection
+    # in gallbladder cancer» (PMID 43049805) finiva in eso-gastrico con 0,7 punti ('direct
+    # duodenal invasion') contro 0,5 dell'HPB ('gallbladder').
+    termini_deboli: [duodenal, variceal]
+    ancore_esogastriche: [esophag, oesophag, gastric, gastrectom, stomach, bariatric, obes,
+                          sleeve, hiatal, hiatus, achalasia, Barrett, fundoplication, pylor,
+                          peptic, duodenal ulcer, duodenal switch, duodenal stump,
+                          gastroduodenal, gastrojejun, Roux-en-Y, GIST]
   proctologia:
     label: "Proctologia"
     scalini: [7, 10, 14, 21, 28]
