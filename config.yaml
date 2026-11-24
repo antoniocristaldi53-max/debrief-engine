@@ -18,6 +18,8 @@ formula:
   penalita_segnali:
     case_report: 0.75
     revisione_narrativa: 0.85
+    # 24/11/2026: resoconti di congresso (PSOGI 2025, 57,7, rank 2 senza dati originali)
+    sintesi_congresso: 0.85
   top_n: 7
   candidati_extra: 5        # oltre la top-7, per permettere riordino editoriale
   minimo_area: 3
@@ -89,6 +91,10 @@ riviste:
   "Can J Surg": 3
   "J Robot Surg": 3
   "J Laparoendosc Adv Surg Tech A": 3
+  # 24/11/2026: proctologia al tetto dei 28 giorni con 1 articolo (17 dei 27 in finestra già usciti).
+  # Rivista della Japan Society of Coloproctology: 7 lavori proctologici in 28 giorni, quanti
+  # Dis Colon Rectum; nessun'altra rivista fuori whitelist supera 1 lavoro chirurgico.
+  "J Anus Rectum Colon": 3
 
 # Query di recupero (identiche al prompt, per confrontabilità col connettore)
 query:
@@ -103,7 +109,8 @@ query:
   # 16/11/2026: terza query con le riviste aggiunte (vedi sopra)
   C: ["J Hepatobiliary Pancreat Sci", "Surg Obes Relat Dis", "J Abdom Wall Surg", "Ann Coloproctol",
       "Ann Gastroenterol Surg", "BMC Surg", "Am Surg", "ANZ J Surg", "Ann R Coll Surg Engl",
-      "Can J Surg", "J Robot Surg", "J Laparoendosc Adv Surg Tech A"]
+      "Can J Surg", "J Robot Surg", "J Laparoendosc Adv Surg Tech A",
+      "J Anus Rectum Colon"]   # 24/11/2026
   supplementare:
     parete: ["Hernia", "Surg Endosc", "BJS Open", "Ann Surg", "Br J Surg", "JAMA Surg",
              "Am J Surg", "J Am Coll Surg", "World J Surg", "Langenbecks Arch Surg",
@@ -113,7 +120,8 @@ query:
     proctologia: ["Tech Coloproctol", "Int J Colorectal Dis", "Colorectal Dis", "Dis Colon Rectum",
                   "Ann Surg", "Br J Surg", "Surg Endosc", "BJS Open", "Updates Surg",
                   "Langenbecks Arch Surg", "Am J Surg", "Surgery",
-                  "Ann Coloproctol", "BMC Surg", "Am Surg", "ANZ J Surg"]
+                  "Ann Coloproctol", "BMC Surg", "Am Surg", "ANZ J Surg",
+                  "J Anus Rectum Colon"]
 
 aree:
   hpb:
@@ -189,9 +197,11 @@ aree:
     soglia_prevalenza: 1.8
     termini:
       1.0: [hemorrhoid, anal fistula, fistula-in-ano, anal fissure, pilonidal, rectal prolapse,
-            fecal incontinence, anal cancer, perianal fistula, rectovaginal fistula, anal abscess]
+            fecal incontinence, anal cancer, perianal fistula, rectovaginal fistula, anal abscess,
+            # 24/11/2026: grafia britannica (Colorectal Dis, Tech Coloproctol, BJS)
+            haemorrhoid, faecal incontinence, fistula in ano]
       0.9: [anal canal, perianal, anorectal, seton, LIFT procedure, anal sphincter, rectocele,
-            obstructed defecation, pruritus ani]
+            obstructed defecation, pruritus ani, obstructed defaecation]
 
 scarti:
   tipi_pubblicazione:   # PublicationType che portano allo scarto obbligatorio
@@ -230,6 +240,10 @@ scarti:
   # 18/11/2026: riconoscimento dal testo, oltre che dal PublicationType (spesso assente)
   case_report_abstract: "^\\s*(we (present|report|describe) (a|an|the) (rare )?case|(a|an)\\s+\\d{1,3}[- ]?(year|yr)s?[- ]old|case (presentation|summary)\\s*:)"
   revisione_sistematica_testo: "systematic review|meta-analy|metaanaly|network meta|PRISMA|pooled analysis"
+  # 24/11/2026: resoconto di congresso riconosciuto dal titolo (parola del congresso + parola
+  # del resoconto). Le consensus conference restano linee guida e non sono marcate.
+  congresso_titolo: "\\b(congress|meeting|symposium|summit|conference|workshop)\\b"
+  resoconto_titolo: "take[- ]home|highlights?|key (updates|messages|takeaways)|proceedings|meeting report|conference report|report from|summary of|lessons from"
   # abstract con sezioni METHODS/RESULTS: studio originale anche se PubMed lo indicizza come Review
   abstract_strutturato: "(^|\\n)\\s*(METHODS?|MATERIALS? AND METHODS|RESULTS|FINDINGS)\\s*:"
   segnali_editoriali:    # non scartano: marcano per il riordino del modello

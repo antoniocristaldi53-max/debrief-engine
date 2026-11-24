@@ -300,3 +300,40 @@ def test_termini_deboli_restano_con_ancora_esogastrica():
     _, cl = score(rec("Gastroesophageal variceal bleeding: gastric varices after sleeve"),
                   "eso-gastrico")
     assert "variceal" in cl["termini"]
+
+
+# --- 24/11/2026: resoconti di congresso e bacino della proctologia ----------------------------
+def test_resoconto_di_congresso_marcato_e_penalizzato():
+    # PMID 43072058: «Take-home messages from the 2025 15th PSOGI congress», 57,7, rank 2
+    r = rec("Key updates on Peritoneal Surface Oncology: Take-home messages from the 2025 15th "
+            "PSOGI congress.", rivista="Eur J Surg Oncol")
+    assert "sintesi_congresso" in r["segnali"]
+    p = rules.punteggio(r, 2.0, 3, NOW, CFG)
+    assert p["penalita_tipo"] == 0.85
+    r["segnali"] = []
+    assert p["score"] == pytest.approx(rules.punteggio(r, 2.0, 3, NOW, CFG)["score"] * 0.85, abs=0.1)
+
+
+@pytest.mark.parametrize("titolo", [
+    "Consensus conference on the management of rectal cancer: summary of recommendations",
+    "Outcomes of TaTME presented at the ESCP meeting: a multicentre cohort",
+    "Highlights of robotic hepatectomy in 300 patients",
+])
+def test_consenso_e_studi_non_sono_resoconti(titolo):
+    assert "sintesi_congresso" not in rec(titolo)["segnali"]
+
+
+def test_grafia_britannica_conta_per_la_proctologia():
+    _, uk = score(rec("Haemorrhoidal artery ligation versus haemorrhoidectomy and faecal "
+                      "incontinence", rivista="Colorectal Dis"), "proctologia")
+    _, us = score(rec("Hemorrhoidal artery ligation versus hemorrhoidectomy and fecal "
+                      "incontinence", rivista="Dis Colon Rectum"), "proctologia")
+    assert uk["area"] == us["area"] == "proctologia"
+    assert uk["punteggi_aree"]["proctologia"] == us["punteggi_aree"]["proctologia"]
+
+
+def test_j_anus_rectum_colon_nel_recupero_e_nella_supplementare():
+    assert CFG["riviste"]["J Anus Rectum Colon"] == 3
+    assert "J Anus Rectum Colon" in CFG["query"]["supplementare"]["proctologia"]
+    assert rules.doi_plausibile({"rivista_sigla": "J Anus Rectum Colon",
+                                 "doi": "10.23922/jarc.2026-039"})

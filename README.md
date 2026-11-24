@@ -87,3 +87,27 @@ anche una serie PIPAC sul mesotelioma e un consenso PSOGI generico senza riferim
 entrano LASRE e la stadiazione Medicare, le stesse scelte fatte a mano nell'edizione. Fra i record in
 area, 6 marcati case report e 10 revisioni narrative; un'analisi bibliometrica resta marcata
 narrativa (falso positivo accettato).
+
+## Resoconti di congresso e bacino della proctologia (24/11/2026)
+
+Nell'edizione del 24/11 il resoconto del congresso PSOGI 2025 («Take-home messages from the 2025 15th
+PSOGI congress», nessun dato originale) stava al rank 2 del colon-retto con 57,7, e la proctologia
+arrivava al tetto dei 28 giorni con un solo articolo (27 in finestra: 17 già usciti, 9 scarti).
+
+- Segnale `sintesi_congresso`: titolo con una parola del congresso (congress, meeting, symposium,
+  summit, conference, workshop) **e** una del resoconto (take-home, highlights, key updates/messages,
+  proceedings, meeting/conference report, report from, summary of, lessons from). Non si applica se
+  il lavoro è già marcato linea guida (le consensus conference restano tali). Penalità × 0,85,
+  come le revisioni narrative.
+- `J Anus Rectum Colon` (Japan Society of Coloproctology, tier 3, DOI 10.23922) nella query C e nella
+  supplementare della proctologia: 7 lavori proctologici in 28 giorni, quanti Dis Colon Rectum.
+  Fuori whitelist nessun'altra rivista chirurgica superava un lavoro proctologico in 28 giorni
+  (il resto è pediatria, case report e riviste generaliste).
+- Grafia britannica fra i termini della proctologia: haemorrhoid, faecal incontinence, fistula in ano
+  (1,0), obstructed defaecation (0,9). Colorectal Dis, Tech Coloproctol e BJS la usano.
+
+Prova sul recupero del 24/11 con gli stessi PMID già usciti: il PSOGI scende da 57,7 a 48,9 (rank 4);
+la proctologia passa da 1 a 7 articoli (9 selezionabili a 28 giorni), di cui 5 di J Anus Rectum Colon
+e 1 recuperato dalla grafia britannica. Gran parte dei lavori JARC viene da un unico fascicolo
+indicizzato il 29/10: il guadagno stabile atteso è di circa un lavoro proctologico in più a settimana,
+non uno al giorno. La proctologia resta un'area a basso volume.

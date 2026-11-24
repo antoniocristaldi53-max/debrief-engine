@@ -26,6 +26,8 @@ DOI_PREFISSI = {
     "Ann Gastroenterol Surg": ["10.1002"], "BMC Surg": ["10.1186"], "Am Surg": ["10.1177"],
     "ANZ J Surg": ["10.1111"], "Ann R Coll Surg Engl": ["10.1308"], "Can J Surg": ["10.1503"],
     "J Robot Surg": ["10.1007"], "J Laparoendosc Adv Surg Tech A": ["10.1089", "10.1177"],
+    # 24/11/2026
+    "J Anus Rectum Colon": ["10.23922"],
 }
 
 LINEA_GUIDA_TITOLO = re.compile(
@@ -150,6 +152,11 @@ def segnali(rec: dict, cfg: dict) -> list[str]:
                               f'{rec["titolo_en"]} {rec["abstract"]}', re.I) \
             and not re.search(s["abstract_strutturato"], rec["abstract"]):
         out.append("revisione_narrativa")
+    # 24/11/2026: resoconto di congresso (sintesi senza dati originali)
+    if not {"linea_guida", "linea_guida_da_titolo"} & set(out) \
+            and re.search(s["congresso_titolo"], rec["titolo_en"], re.I) \
+            and re.search(s["resoconto_titolo"], rec["titolo_en"], re.I):
+        out.append("sintesi_congresso")
     return sorted(out)
 
 
