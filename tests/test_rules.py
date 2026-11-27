@@ -337,3 +337,18 @@ def test_j_anus_rectum_colon_nel_recupero_e_nella_supplementare():
     assert "J Anus Rectum Colon" in CFG["query"]["supplementare"]["proctologia"]
     assert rules.doi_plausibile({"rivista_sigla": "J Anus Rectum Colon",
                                  "doi": "10.23922/jarc.2026-039"})
+
+
+def test_riviste_aggiunte_27_11_per_la_proctologia():
+    assert CFG["riviste"]["J Crohns Colitis"] == 2
+    assert CFG["riviste"]["J Surg Res"] == 3
+    for j in ("J Crohns Colitis", "J Surg Res"):
+        assert j in CFG["query"]["C"]
+        assert j in CFG["query"]["supplementare"]["proctologia"]
+    assert rules.doi_plausibile({"rivista_sigla": "J Crohns Colitis",
+                                 "doi": "10.1093/ecco-jcc/jjag199"})
+    assert rules.doi_plausibile({"rivista_sigla": "J Surg Res",
+                                 "doi": "10.1016/j.jss.2026.10.003"})
+    _, r = score(rec("Microfragmented autologous adipose tissue for perianal fistula in Crohn's "
+                     "disease: randomized trial", rivista="J Crohns Colitis"), "proctologia")
+    assert r["area"] == "proctologia"

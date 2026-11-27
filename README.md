@@ -111,3 +111,14 @@ la proctologia passa da 1 a 7 articoli (9 selezionabili a 28 giorni), di cui 5 d
 e 1 recuperato dalla grafia britannica. Gran parte dei lavori JARC viene da un unico fascicolo
 indicizzato il 29/10: il guadagno stabile atteso è di circa un lavoro proctologico in più a settimana,
 non uno al giorno. La proctologia resta un'area a basso volume.
+
+## Proctologia: due riviste in più (27/11/2026)
+
+La proctologia usciva vuota al tetto dei 28 giorni in quattro edizioni su sette (21-27/11): il pool
+delle whitelist produce meno di un lavoro nuovo al giorno. Allungare gli scalini oltre i 28 giorni
+non serve: i 13 lavori proctologici fra 29 e 42 giorni erano tutti già pubblicati (10-28/10) e
+sarebbero stati ripubblicati, perché i PMID già usciti coprono 29 giorni.
+
+- `J Crohns Colitis` (ECCO, tier 2) e `J Surg Res` (tier 3) nella query C e nella supplementare
+  della proctologia, con prefissi DOI verificati.
+- Prova sull'edizione del 27/11: proctologia da 0 articoli a 28 giorni a 3 articoli a 14 giorni.

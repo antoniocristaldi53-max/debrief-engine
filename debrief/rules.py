@@ -28,6 +28,8 @@ DOI_PREFISSI = {
     "J Robot Surg": ["10.1007"], "J Laparoendosc Adv Surg Tech A": ["10.1089", "10.1177"],
     # 24/11/2026
     "J Anus Rectum Colon": ["10.23922"],
+    # 27/11/2026, prefissi verificati su E-utilities
+    "J Crohns Colitis": ["10.1093"], "J Surg Res": ["10.1016"],
 }
 
 LINEA_GUIDA_TITOLO = re.compile(

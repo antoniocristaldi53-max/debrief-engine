@@ -95,6 +95,13 @@ riviste:
   # Rivista della Japan Society of Coloproctology: 7 lavori proctologici in 28 giorni, quanti
   # Dis Colon Rectum; nessun'altra rivista fuori whitelist supera 1 lavoro chirurgico.
   "J Anus Rectum Colon": 3
+  # 27/11/2026: proctologia ancora vuota a 28 giorni (23 in finestra, 6 scarti, 17 già usciti).
+  # Allungare gli scalini oltre 28 giorni non serve: i 13 lavori proctologici delle whitelist fra
+  # 29 e 42 giorni erano tutti già pubblicati fra il 10 e il 28/10. Fuori whitelist, in 28 giorni,
+  # solo queste due riviste hanno più di un lavoro proctologico chirurgico (J Crohns Colitis 3
+  # perianali, fra cui un RCT di fase 3; J Surg Res 2); Cureus, Front Med, J Clin Med no.
+  "J Crohns Colitis": 2               # ECCO
+  "J Surg Res": 3
 
 # Query di recupero (identiche al prompt, per confrontabilità col connettore)
 query:
@@ -110,7 +117,8 @@ query:
   C: ["J Hepatobiliary Pancreat Sci", "Surg Obes Relat Dis", "J Abdom Wall Surg", "Ann Coloproctol",
       "Ann Gastroenterol Surg", "BMC Surg", "Am Surg", "ANZ J Surg", "Ann R Coll Surg Engl",
       "Can J Surg", "J Robot Surg", "J Laparoendosc Adv Surg Tech A",
-      "J Anus Rectum Colon"]   # 24/11/2026
+      "J Anus Rectum Colon",   # 24/11/2026
+      "J Crohns Colitis", "J Surg Res"]   # 27/11/2026
   supplementare:
     parete: ["Hernia", "Surg Endosc", "BJS Open", "Ann Surg", "Br J Surg", "JAMA Surg",
              "Am J Surg", "J Am Coll Surg", "World J Surg", "Langenbecks Arch Surg",
@@ -121,7 +129,7 @@ query:
                   "Ann Surg", "Br J Surg", "Surg Endosc", "BJS Open", "Updates Surg",
                   "Langenbecks Arch Surg", "Am J Surg", "Surgery",
                   "Ann Coloproctol", "BMC Surg", "Am Surg", "ANZ J Surg",
-                  "J Anus Rectum Colon"]
+                  "J Anus Rectum Colon", "J Crohns Colitis", "J Surg Res"]
 
 aree:
   hpb:
